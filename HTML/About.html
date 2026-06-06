@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="stylesheet" href="../CSS/Home.css" />
+  <link rel="stylesheet" href="../CSS/About.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="../JavaScript/home.js"></script>
+  <script src="../JavaScript/About.js"></script>
+
+  <script type="module">
+    window.mermaidConfig = { startOnLoad: false };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <svg class="network-nodes" viewBox="0 0 1200 800" preserveAspectRatio="none" role="presentation">
+      <g>
+        <line class="n-line" x1="120" y1="140" x2="240" y2="220" />
+        <line class="n-line" x1="240" y1="220" x2="360" y2="160" />
+        <line class="n-line" x1="360" y1="160" x2="520" y2="250" />
+        <line class="n-line" x1="520" y1="250" x2="660" y2="190" />
+        <line class="n-line" x1="660" y1="190" x2="820" y2="300" />
+        <line class="n-line" x1="820" y1="300" x2="980" y2="240" />
+        <line class="n-line" x1="980" y1="240" x2="1060" y2="360" />
+
+        <line class="n-line" x1="120" y1="300" x2="260" y2="360" />
+        <line class="n-line" x1="260" y1="360" x2="420" y2="320" />
+        <line class="n-line" x1="420" y1="320" x2="560" y2="420" />
+        <line class="n-line" x1="560" y1="420" x2="720" y2="360" />
+        <line class="n-line" x1="720" y1="360" x2="860" y2="470" />
+        <line class="n-line" x1="860" y1="470" x2="1040" y2="410" />
+
+        <line class="n-line" x1="160" y1="520" x2="320" y2="500" />
+        <line class="n-line" x1="320" y1="500" x2="460" y2="560" />
+        <line class="n-line" x1="460" y1="560" x2="620" y2="520" />
+        <line class="n-line" x1="620" y1="520" x2="760" y2="610" />
+        <line class="n-line" x1="760" y1="610" x2="920" y2="560" />
+      </g>
+
+      <g>
+        <circle class="n-node n1" cx="120" cy="140" r="4.6" />
+        <circle class="n-node n2" cx="240" cy="220" r="3.8" />
+        <circle class="n-node" cx="360" cy="160" r="4.2" />
+        <circle class="n-node n3" cx="520" cy="250" r="4.6" />
+        <circle class="n-node" cx="660" cy="190" r="3.9" />
+        <circle class="n-node n2" cx="820" cy="300" r="4.4" />
+        <circle class="n-node" cx="980" cy="240" r="3.7" />
+        <circle class="n-node n3" cx="1060" cy="360" r="4.5" />
+
+        <circle class="n-node" cx="120" cy="300" r="3.9" />
+        <circle class="n-node n2" cx="260" cy="360" r="4.6" />
+        <circle class="n-node" cx="420" cy="320" r="3.7" />
+        <circle class="n-node n3" cx="560" cy="420" r="4.4" />
+        <circle class="n-node" cx="720" cy="360" r="3.8" />
+        <circle class="n-node n2" cx="860" cy="470" r="4.3" />
+        <circle class="n-node" cx="1040" cy="410" r="3.9" />
+
+        <circle class="n-node n3" cx="160" cy="520" r="4.2" />
+        <circle class="n-node" cx="320" cy="500" r="3.6" />
+        <circle class="n-node n2" cx="460" cy="560" r="4.5" />
+        <circle class="n-node" cx="620" cy="520" r="3.9" />
+        <circle class="n-node n3" cx="760" cy="610" r="4.2" />
+        <circle class="n-node" cx="920" cy="560" r="3.8" />
+      </g>
+    </svg>
+  </div>
+
+  <header class="nav" id="top">
+    <div class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-glow">MY PORTFOLIO</span>
+    </div>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a class="nav-link" href="./Home.html" data-link>Home</a>
+      <a class="nav-link" href="./About.html" data-link>About</a>
+      <a class="nav-link" href="./Projects.html" data-link>Projects</a>
+      <a class="nav-link" href="./Certifications.html" data-link>Skills & Certifications</a>
+      <a class="nav-link" href="./Contact.html" data-link>Contact</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Open menu" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="wrap">
+    <div class="about-dossier" aria-label="About dossier (Experience and Education)">
+      <section class="timeline-col" aria-label="Experience column">
+        <h2>Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item timeline-left">
+            <div class="timeline-dot"></div>
+            <div class="about-card">
+              <img src="../Asset/Experience/deloitte.jpg" alt="Deloitte" class="about-logo">
+              <div class="about-content">
+                <h3>Virtual Intern – Technology Consulting</h3>
+                <p><strong>Deloitte</strong></p>
+                <p>Online Internship</p>
+                <span class="date-range">Aug 2025 – Sep 2025</span>
+                <ul>
+                  <li>Key accomplishment 1</li>
+                  <li>Key accomplishment 2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-left">
+            <div class="timeline-dot"></div>
+            <div class="about-card">
+              <img src="../Asset/Experience/deloitte.jpg" alt="Deloitte" class="about-logo">
+              <div class="about-content">
+                <h3>Role Title</h3>
+                <p><strong>Company Name</strong></p>
+                <span class="date-range">Start Date – End Date</span>
+                <ul>
+                  <li>Key accomplishment 1</li>
+                  <li>Key accomplishment 2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-col" aria-label="Education column">
+        <h2>Education</h2>
+
+        <div class="timeline">
+          <div class="timeline-item timeline-right">
+            <div class="timeline-dot"></div>
+            <div class="about-card">
+              <img src="../Asset/Education/Brainware_University.svg.png" alt="Brainware University" class="about-logo">
+              <div class="about-content">
+                <h3>Bachelors of Computer Applications</h3>
+                <p><strong>Brainware University</strong></p>
+                <span class="date-range">June 2024 – Present</span>
+                <p>Specialized BCA (Honours) program focused on software development, problem-solving, and emerging tech.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-right">
+            <div class="timeline-dot"></div>
+            <div class="about-card">
+              <img src="../Asset/Education/HS.png" alt="H.S. Memorial School" class="about-logo">
+              <div class="about-content">
+                <h3>ISC - 12th</h3>
+                <p><strong>H.S. Memorial School</strong></p>
+                <span class="date-range">May 2022 – April 2024</span>
+                <p>Completed Indian Certificate of Secondary Education (ISC) with focus on Computer Science and Humanities.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-right">
+            <div class="timeline-dot"></div>
+            <div class="about-card">
+              <img src="../Asset/Education/St.png" alt="St. Stephens School" class="about-logo">
+              <div class="about-content">
+                <h3>ICSE - 10th</h3>
+                <p><strong>St. Stephens School, Dankuni</strong></p>
+                <span class="date-range">Apr 2009 – Apr 2022</span>
+                <p>Completed Indian Certificate of Secondary Education (ICSE) with Science focus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">© 2026 Sayantan Jana | Built with Neon Black Theme</div>
+    <a href="./Contact.html" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </footer>
+</body>
+</html>

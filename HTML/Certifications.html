@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Certifications</title>
+  <link rel="stylesheet" href="../CSS/Home.css" />
+  <link rel="stylesheet" href="../CSS/Certifications.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <script src="../JavaScript/home.js"></script>
+  <script src="../JavaScript/certifications.js"></script>
+
+
+  <script type="module">
+    window.mermaidConfig = { startOnLoad: false };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <svg class="network-nodes" viewBox="0 0 1200 800" preserveAspectRatio="none" role="presentation">
+      <g>
+        <line class="n-line" x1="120" y1="140" x2="240" y2="220" />
+        <line class="n-line" x1="240" y1="220" x2="360" y2="160" />
+        <line class="n-line" x1="360" y1="160" x2="520" y2="250" />
+        <line class="n-line" x1="520" y1="250" x2="660" y2="190" />
+        <line class="n-line" x1="660" y1="190" x2="820" y2="300" />
+        <line class="n-line" x1="820" y1="300" x2="980" y2="240" />
+        <line class="n-line" x1="980" y1="240" x2="1060" y2="360" />
+
+        <line class="n-line" x1="120" y1="300" x2="260" y2="360" />
+        <line class="n-line" x1="260" y1="360" x2="420" y2="320" />
+        <line class="n-line" x1="420" y1="320" x2="560" y2="420" />
+        <line class="n-line" x1="560" y1="420" x2="720" y2="360" />
+        <line class="n-line" x1="720" y1="360" x2="860" y2="470" />
+        <line class="n-line" x1="860" y1="470" x2="1040" y2="410" />
+
+        <line class="n-line" x1="160" y1="520" x2="320" y2="500" />
+        <line class="n-line" x1="320" y1="500" x2="460" y2="560" />
+        <line class="n-line" x1="460" y1="560" x2="620" y2="520" />
+        <line class="n-line" x1="620" y1="520" x2="760" y2="610" />
+        <line class="n-line" x1="760" y1="610" x2="920" y2="560" />
+      </g>
+
+      <g>
+        <circle class="n-node n1" cx="120" cy="140" r="4.6" />
+        <circle class="n-node n2" cx="240" cy="220" r="3.8" />
+        <circle class="n-node" cx="360" cy="160" r="4.2" />
+        <circle class="n-node n3" cx="520" cy="250" r="4.6" />
+        <circle class="n-node" cx="660" cy="190" r="3.9" />
+        <circle class="n-node n2" cx="820" cy="300" r="4.4" />
+        <circle class="n-node" cx="980" cy="240" r="3.7" />
+        <circle class="n-node n3" cx="1060" cy="360" r="4.5" />
+
+        <circle class="n-node" cx="120" cy="300" r="3.9" />
+        <circle class="n-node n2" cx="260" cy="360" r="4.6" />
+        <circle class="n-node" cx="420" cy="320" r="3.7" />
+        <circle class="n-node n3" cx="560" cy="420" r="4.4" />
+        <circle class="n-node" cx="720" cy="360" r="3.8" />
+        <circle class="n-node n2" cx="860" cy="470" r="4.3" />
+        <circle class="n-node" cx="1040" cy="410" r="3.9" />
+
+        <circle class="n-node n3" cx="160" cy="520" r="4.2" />
+        <circle class="n-node" cx="320" cy="500" r="3.6" />
+        <circle class="n-node n2" cx="460" cy="560" r="4.5" />
+        <circle class="n-node" cx="620" cy="520" r="3.9" />
+        <circle class="n-node n3" cx="760" cy="610" r="4.2" />
+        <circle class="n-node" cx="920" cy="560" r="3.8" />
+      </g>
+    </svg>
+  </div>
+
+  <header class="nav" id="top">
+    <div class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-glow">MY PORTFOLIO</span>
+    </div>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a class="nav-link" href="./Home.html" data-link>Home</a>
+      <a class="nav-link" href="./About.html" data-link>About</a>
+      <a class="nav-link" href="./Projects.html" data-link>Projects</a>
+      <a class="nav-link" href="./Certifications.html" data-link class="active">Skills &amp; Certifications</a>
+      <a class="nav-link" href="./Contact.html" data-link>Contact</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Open menu" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+<main class="wrap">
+    <section class="skills-cert-container" aria-label="Skills and certifications dossier">
+      <div class="skills-column">
+        <div class="cert-dossier__head skills-head">
+          <h2 id="skills-title" class="cert-dossier__title">Skills &amp; TechStack</h2>
+          <hr class="cert-dossier__rule" />
+        </div>
+
+<div class="skills-grid" aria-label="Categorized skills matrix">
+           <!-- Backend & Languages -->
+           <div class="skills-category" aria-label="Backend & Languages" style="--category-index: 0;">
+             <div class="skills-category__title">Backend Languages  &amp; Frameworks</div>
+             <div class="skills-category__icons" aria-hidden="true">
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/python.png" alt="" style="--icon-index: 0;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/Java.png" alt="" style="--icon-index: 1;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/C.png" alt="" style="--icon-index: 2;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/Php.png" alt="" style="--icon-index: 3;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/C++.png" alt="" style="--icon-index: 4;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/JavaScript-logo.png" alt="" style="--icon-index: 5;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_Logo/kotlin.png" alt="" style="--icon-index: 6;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/sql.png" alt="" style="--icon-index: 7;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/Nosql.png" alt="" style="--icon-index: 8;" />
+
+
+
+             </div>
+
+             <div class="skills-category__icons" aria-hidden="true">
+               <img class="skills-icon" src="../Asset/Skills/Framework_Logo/FastAPi.png" alt="" style="height: 100px; width: 100px; --icon-index: 9;" />
+               <img class="skills-icon" src="../Asset/Skills/Framework_Logo/Spring.png" alt="" style="height: 100px; width: 100px; --icon-index: 10;" />
+               <img class="skills-icon" src="../Asset/Skills/Framework_Logo/Node.js_logo.svg.png" alt="" style="height: 100px; width: 100px; --icon-index: 11;" />
+             </div>
+           </div>
+
+           <!-- Databases & Cloud -->
+           <div class="skills-category" aria-label="Databases & Cloud" style="--category-index: 1;">
+             <div class="skills-category__title" >Databases &amp; Cloud</div>
+             <div class="skills-category__icons" aria-hidden="true">
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/Mysql.png" alt="" style="height: 100px; width: 100px; --icon-index: 0;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/Postgresql_elephant.svg.png" alt="" style="--icon-index: 1;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/mongodb.png" alt="" style="--icon-index: 2;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/Oracle Database.png" alt="" style="height: 100px; width: 100px; --icon-index: 3;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/Clickhouse.png" alt="" style="--icon-index: 4;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/Chromadb.png" alt="" style="height: 100px; width: 100px; --icon-index: 5;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/Supabase.webp" alt="" style="--icon-index: 6;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/fire.png" alt="" style="--icon-index: 7;" />
+             </div>
+                <br>
+             <div class="skills-category__icons" aria-hidden="true">
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/aws.png" alt="" style="--icon-index: 8;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/google.png" alt="" style="--icon-index: 9;" />
+                <img class="skills-icon" src="../Asset/Skills/Tool_logo/micro.png" alt="" style="--icon-index: 10;" />
+
+             </div>
+           </div>
+
+           <!-- DevOps & Tools -->
+           <div class="skills-category" aria-label="DevOps & Tools" style="--category-index: 2;">
+             <div class="skills-category__title">DevOps &amp; Tools</div>
+             <div class="skills-category__icons" aria-hidden="true">
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/docker.png" alt="" style="--icon-index: 0;" />
+                              <img class="skills-icon" src="../Asset/Skills/Tool_logo/kuber.png" alt="" style="--icon-index: 1;" />
+                <img class="skills-icon" src="../Asset/Skills/Framework_Logo/Pro.jpg" alt="" style="--icon-index: 2;border-radius: 50px;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/Jupyter.png" alt="" style="--icon-index: 3;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/Spyder.png" alt="" style="--icon-index: 4;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/github.png" alt="" style=" border-radius: 100%; --icon-index: 5;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/IJ.png" alt="" style="--icon-index: 6;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/git.png" alt="" style="--icon-index: 7;" />
+               <img class="skills-icon" src="../Asset/Skills/Tool_logo/Power.png" alt="" style="--icon-index: 8;" />
+
+             </div>
+           </div>
+
+           <!-- Frontend & Languages -->
+           <div class="skills-category" aria-label="Frontend & Languages" style="--category-index: 3;">
+             <div class="skills-category__title">Frontend Languages &AMP; Frameworks</div>
+             <div class="skills-category__icons" aria-hidden="true">
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/HTML.png" alt="" style="--icon-index: 0;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/CSS.png" alt="" style="--icon-index: 1;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/JavaScript-logo.png" alt="" style="--icon-index: 2;" />
+               <img class="skills-icon" src="../Asset/Skills/Framework_Logo/react.png" alt="" style="--icon-index: 3;" />
+               <img class="skills-icon" src="../Asset/Skills/Framework_Logo/Vue.png" alt="" style="--icon-index: 4;" />
+               <img class="skills-icon" src="../Asset/Skills/Framework_Logo/Bootstrap_logo.svg.png" alt="" style="--icon-index: 5;" />
+               <img class="skills-icon" src="../Asset/Skills/Framework_Logo/tailwind.png" alt="" style="--icon-index: 6;" />
+               <img class="skills-icon" src="../Asset/Skills/Skill_Logo/jq.png" alt="" style="--icon-index: 7;" />
+             </div>
+           </div>
+         </div>
+
+      </div>
+
+      <div class="certifications-column">
+        <div class="cert-dossier__head certs-head">
+          <h2 id="certs-title" class="cert-dossier__title">Proofessinal Certifications</h2>
+          <hr class="cert-dossier__rule" />
+        </div>
+
+        <ul class="cert-proof-list" aria-label="Certifications list">
+            <li class="cert-proof-item" role="listitem" style="--cert-index: 0;">
+              
+                <img
+                  class="cert-proof-logo__img"
+                  src="../Asset/Course/NPTEL.png"
+                  alt="NPTEL logo"
+                  style="height: 57px; width: 57px;
+                  border-radius: 100%;"
+                />
+              
+
+              <div class="cert-proof-content">
+                <div class="cert-proof-title">Problem Solving through Programming in C</div>
+                <div class="cert-proof-date">May 2025</div>
+
+                <a
+                  class="btn btn-verify cert-proof-verify"
+                  href="https://nptel.ac.in/noc/E_Certificate/NPTEL25CS56S54950120204413833"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Verify
+                </a>
+              </div>
+            </li>
+
+            <li class="cert-proof-item" role="listitem">
+              
+                <img
+                  class="cert-proof-logo__img"
+                  src="../Asset/Course/NPTEL.png"
+                  alt="NPTEL logo"
+                  style="height: 57px; width: 57px;
+                  border-radius: 100%;"
+                />
+              
+
+              <div class="cert-proof-content">
+                <div class="cert-proof-title">Database Management System</div>
+                <div class="cert-proof-date">Sep 2025</div>
+
+                <a
+                  class="btn btn-verify cert-proof-verify"
+                  href="https://nptel.ac.in/noc/E_Certificate/NPTEL25CS145S63960101109173966"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Verify
+                </a>
+              </div>
+            </li>
+
+            <li class="cert-proof-item" role="listitem">
+              
+                <img
+                  class="cert-proof-logo__img"
+                  src="../Asset/Course/NPTEL.png"
+                  alt="NPTEL logo"
+                  style="height: 57px; width: 57px;
+                  border-radius: 100%;"
+                />
+              
+
+              <div class="cert-proof-content">
+                <div class="cert-proof-title">English for Competitive Exam</div>
+                <div class="cert-proof-date">Sep 2025</div>
+
+                <a
+                  class="btn btn-verify cert-proof-verify"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Verify
+                </a>
+              </div>
+            </li>
+
+            <li class="cert-proof-item" role="listitem">
+                <img
+                  class="cert-proof-logo__img"
+                  src="../Asset/Course/NPTEL.png"
+                  alt="NPTEL logo"
+                  style="height: 57px; width: 57px;
+                  border-radius: 100%;"
+                />
+              
+
+              <div class="cert-proof-content">
+                <div class="cert-proof-title">Programming, Data Structures and Algorithms using Python</div>
+                <div class="cert-proof-date">March 2026</div>
+
+                <a
+                  class="btn btn-verify cert-proof-verify"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Verify
+                </a>
+              </div>
+            </li>
+
+            <li class="cert-proof-item" role="listitem">
+                <img
+                  class="cert-proof-logo__img"
+                  src="../Asset/Course/NPTEL.png"
+                  alt="NPTEL logo"
+                  style="height: 57px; width: 57px;
+                  border-radius: 100%;"
+                />
+              
+
+              <div class="cert-proof-content">
+                <div class="cert-proof-title">Programming in Java</div>
+                <div class="cert-proof-date">Sep 2026</div>
+
+                <a
+                  class="btn btn-verify cert-proof-verify"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Verify
+                </a>
+              </div>
+            </li>
+
+            <li class="cert-proof-item" role="listitem">
+              
+                <img
+                  class="cert-proof-logo__img"
+                  src="../Asset/Course/Coursera.png"
+                  alt="Coursera logo"
+                  style="height: 57px; width: 57px;
+                  border-radius: 100%;"
+                />
+            
+
+              <div class="cert-proof-content">
+                <div class="cert-proof-title">Introduction to Artificial Intelligence</div>
+                <div class="cert-proof-date">Sep 2025</div>
+
+                <a
+                  class="btn btn-verify cert-proof-verify"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Verify
+                </a>
+              </div>
+            </li>
+
+            <li class="cert-proof-item" role="listitem">
+                <img
+                  class="cert-proof-logo__img"
+                  src="../Asset/Course/icon.webp"
+                  alt="TCS iON icon"
+                  style="height: 57px; width: 57px;
+                  border-radius: 100%;"
+                />
+              
+
+              <div class="cert-proof-content">
+                <div class="cert-proof-title">TCS iON Career Edge – Young Professional</div>
+                <div class="cert-proof-date">Oct 2025</div>
+
+                <a
+                  class="btn btn-verify cert-proof-verify"
+                  href="https://drive.google.com/file/d/1zuSayUxUESWvhbuEU7vjCrMYffBgqoF6/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Verify
+                </a>
+              </div>
+            </li>
+
+            <li class="cert-proof-item" role="listitem">
+              
+                <img
+                  class="cert-proof-logo__img"
+                  src="../Asset/Course/Coursera.png"
+                  alt="Coursera logo"
+                  style="height: 57px; width: 57px;
+                  border-radius: 100%;"
+                />
+              
+
+              <div class="cert-proof-content">
+                <div class="cert-proof-title">Generative AI: Introduction and Applications</div>
+                <div class="cert-proof-date">Oct 2025</div>
+
+                <a
+                  class="btn btn-verify cert-proof-verify"
+                  href="https://www.coursera.org/account/accomplishments/records/93XIEJ473W69"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Verify
+                </a>
+              </div>
+            </li>
+
+            <li class="cert-proof-item" role="listitem">
+              
+                <img
+                  class="cert-proof-logo__img"
+                  src="../Asset/Course/Coursera.png"
+                  alt="Coursera logo"
+                  style="height: 57px; width: 57px;
+                  border-radius: 100%;"
+                />
+              
+
+              <div class="cert-proof-content">
+                <div class="cert-proof-title">Generative AI: Prompt Engineering Basics</div>
+                <div class="cert-proof-date">Nov 2025</div>
+
+<a
+                  class="btn btn-verify cert-proof-verify"
+                  href="https://www.coursera.org/account/accomplishments/verify/LX51KOJNLA0E"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Verify
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="footer-left">© 2026 Sayantan Jana | Built with Neon Black Theme</div>
+    <a href="./Certifications.html" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </footer>
+</body>
+</html>
+

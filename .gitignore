@@ -1,0 +1,22 @@
+cat <<EOF > .gitignore
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# VS Code specific settings
+.vscode/
+
+# Build or dependency folders
+node_modules/
+dist/
+build/
+
+# Logs and temporary files
+*.log
+*.tmp
+temp/
+
+# Environment variables
+.env
+EOF

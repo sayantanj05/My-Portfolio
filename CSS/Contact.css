@@ -1,0 +1,298 @@
+/* Contact page (Neon Black) */
+
+.contact-container{
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display:flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  gap: 60px;
+  padding: 40px;
+}
+
+.contact-heading{
+  font-size: 3.1rem;
+  margin: 0;
+  text-align: center;
+  color: rgba(255,255,255,.96);
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.contact-subheading{
+  margin: 0 0 30px;
+  color: #a0a0a0;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.contact-middle{
+  flex: 1;
+}
+
+.contact-main-wrapper{
+  display:flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+}
+
+.contact-info{
+  width: 50%;
+}
+
+.social-icons-wrapper{
+  width: 50%;
+  display:flex;
+  justify-content:flex-end;
+}
+
+/* Legacy classes (kept harmless if any other code references them) */
+.contact-content{
+  display:flex;
+}
+
+.contact-details{ width: 60%; }
+
+.social-area{
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+.contact-details-title{
+  margin: 0 0 18px;
+  font-size: 1.5rem;
+  color: rgba(232,242,255,.86);
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
+.contact-row{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contact-text{
+  color: rgba(232,242,255,.92);
+  font-weight: 600;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between icon and text */
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.contact-item i {
+  color: #00d4ff; /* Matches your neon theme */
+  width: 25px; /* Ensures icons are all aligned vertically */
+  text-align: center;
+}
+
+.contact-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--neon);
+}
+
+
+
+/* Rendered SVG inherits currentColor */
+.contact-icon svg,
+.social-icon svg{
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  fill: none;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #00d4ff;
+  transform: scale(1.2);
+}
+
+/* Keep existing hook classes harmless (if any JS/styles rely on them) */
+.social-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color: var(--neon);
+}
+
+.contact-cta {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.contact-cta-divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 18px 0;
+}
+
+.contact-cta-text {
+  margin: 0 0 18px;
+  color: rgba(232,242,255,.92);
+  font-weight: 600;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: transparent;
+  border: 1px solid #00d4ff;
+  color: #00d4ff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #00d4ff;
+  color: #000;
+  box-shadow: 0 0 15px #00d4ff;
+}
+
+.secondary {
+  border-color: #ccff00;
+  color: #ccff00;
+}
+
+.secondary:hover {
+  background: #ccff00;
+  color: #000;
+  box-shadow: 0 0 15px #ffffff;
+}
+
+/* =========================================================
+   Neon animations (performant via CSS + IntersectionObserver)
+   ========================================================= */
+
+/* Global smooth entrance for relevant content blocks */
+.section-fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+}
+
+.section-fadein.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 212, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 212, 255, 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 212, 255, 0);
+  }
+}
+
+/* Pulsing neon glow on hover */
+.icon-glow,
+.cta-button,
+.social-icons a {
+  transition: box-shadow 220ms ease, transform 220ms ease;
+  will-change: box-shadow, transform;
+}
+
+/* neon glow boxes (icon containers) */
+.icon-glow:hover,
+.cta-button:hover,
+.social-icons a:hover {
+  animation: neonPulse 900ms ease-in-out infinite;
+}
+
+/* Ensure transforms don't get overridden by other rules */
+.social-icons a {
+  transform: translateZ(0);
+}
+
+
+/* Contact Me heading gradient shift */
+.contact-heading.gradient-shift {
+  background: linear-gradient(90deg, #202020 0%, #2b2b2b 30%, rgba(0, 212, 255, 0.75) 60%, rgba(0, 212, 255, 0.95) 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: headingGradient 6s linear infinite;
+  will-change: background-position;
+}
+
+@keyframes headingGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Icon Hover Parallax / snappy fun */
+.social-icons a:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+@media (max-width: 980px){
+  .contact-container{
+    padding: 28px;
+    gap: 24px;
+    flex-direction: column;
+    align-items:flex-start;
+  }
+
+  .contact-content{
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .social-icons{
+    padding-top: 0;
+  }
+}
+
+
