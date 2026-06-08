@@ -22,10 +22,10 @@
   transform: translateY(0);
 }
 
-.about-content {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.about-content > h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 /* Photo/logo sizing for experience/education */
@@ -49,9 +49,27 @@
 }
 
 .date-range {
-  font-size: 0.85rem;
-  color: #888;
+  font-size: 0.9rem;
+  color: #666666;
   font-weight: 500;
+}
+
+.score-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-top: 10px;
+  border: 1px solid #00d4ff;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3), inset 0 0 5px rgba(0, 212, 255, 0.1);
+  background: rgba(0, 212, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.score-badge:hover {
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5), inset 0 0 5px rgba(0, 212, 255, 0.2);
 }
 
 /* Dual Timeline Columns */
@@ -63,10 +81,62 @@
 }
 
 .timeline-col h2 {
-  margin: 28px 0 16px;
-  font-size: 20px;
-  color: rgba(232, 242, 255, 0.95);
+  margin: 28px auto 24px;
+  font-size: 28px;
   letter-spacing: -0.01em;
+  text-align: center;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  color: rgba(232,242,255,.96);
+  background: linear-gradient(90deg, var(--neon), var(--neon3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow{
+  from{ text-shadow: 0 0 10px rgba(0,183,255,.3); }
+  to{ text-shadow: 0 0 20px rgba(57,246,255,.5); }
+}
+
+@keyframes titleGlow{
+  from{ text-shadow: 0 0 10px rgba(0,183,255,.3); }
+  to{ text-shadow: 0 0 20px rgba(57,246,255,.5); }
+}
+
+/* Tighten text spacing inside experience and education cards */
+.timeline-col:first-child .about-content,
+.timeline-col:last-child .about-content {
+  gap: 4px;
+}
+
+/* Preserve specific styling for titles, descriptions, and list items */
+.timeline-col:first-child .about-content > h3,
+.timeline-col:last-child .about-content > h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.timeline-col:first-child .about-content > p > strong,
+.timeline-col:last-child .about-content > p > strong {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  letter-spacing: 0.02em;
+}
+
+.about-card ul li {
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+.about-content > p {
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 10px;
 }
 
 .timeline-col {
@@ -137,18 +207,12 @@
 }
 
 /* Card reveal animation */
-.about-card {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
 .about-card.revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* List items */
+/* List items - work experience accomplishments */
 .about-card ul {
   padding-left: 18px;
   margin: 8px 0 0;
@@ -161,6 +225,11 @@
   list-style: none;
   position: relative;
   padding-left: 10px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 10px;
 }
 
 .about-card ul li::before {
@@ -168,6 +237,7 @@
   color: rgba(0, 212, 255, 0.7);
   position: absolute;
   left: -14px;
+  flex-shrink: 0;
 }
 
 .about-card.revealed ul li {
@@ -178,6 +248,13 @@
 .about-card.revealed ul li:nth-child(1) { transition-delay: 0.15s; }
 .about-card.revealed ul li:nth-child(2) { transition-delay: 0.25s; }
 .about-card.revealed ul li:nth-child(3) { transition-delay: 0.35s; }
+
+/* Education descriptions */
+.about-content > p {
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 10px;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
@@ -197,24 +274,6 @@
     right: auto;
     left: -37px;
   }
-}
-
-.back-to-top {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: rgba(0, 212, 255, 0.9);
-  border: 1px solid rgba(0, 212, 255, 0.35);
-  background: rgba(0, 212, 255, 0.05);
-  transition: all 0.3s ease;
-}
-
-.back-to-top:hover {
-  background: rgba(0, 212, 255, 0.15);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
 /* Reduced motion preference */

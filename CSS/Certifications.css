@@ -8,6 +8,19 @@
 /* ===============
      Reveal base styles for Certifications page
      =============== */
+/* Global smooth entrance for main content blocks (same as Contact page) */
+.section-fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+}
+
+.section-fadein.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .reveal{ opacity: 0; transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible{ opacity: 1; }
 
@@ -376,11 +389,24 @@
 .cert-dossier__head{ margin: 0 0 16px; }
 
 .cert-dossier__title{
-  margin: 0;
-  font-size: 25px;
-  color: rgba(232,242,255,.95);
+  margin: 28px auto 24px;
+  font-size: 28px;
   letter-spacing: -0.01em;
-  animation: breathing 3.2s ease-in-out infinite;
+  color: rgba(232,242,255,.96);
+  text-align: center;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, var(--neon), var(--neon3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow{
+  from{ text-shadow: 0 0 10px rgba(0,183,255,.3); }
+  to{ text-shadow: 0 0 20px rgba(57,246,255,.5); }
 }
 
 .cert-dossier__rule{
@@ -509,17 +535,19 @@ body{
 }
 
 .back-to-top{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid rgba(255,255,255,0.18);
-  color: rgba(232,242,255,.92);
+  background: transparent;
+  border: 1px #00d4ff;
+  color: #00d4ff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
   text-decoration: none;
-  transition: background .25s ease, border-color .25s ease, transform .18s ease, box-shadow .25s ease;
+}
+
+.back-to-top:hover{
+  background: #00d4ff;
+  color: #000;
+  box-shadow: 0 0 15px #00d4ff;
 }
 
 /* ===============

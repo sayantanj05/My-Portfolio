@@ -2,12 +2,29 @@
 
 .wrap{ max-width: 1180px; margin: 0 auto; padding: 6px 18px 72px; }
 
+/* Global smooth entrance for main content blocks (same as Contact page) */
+.section-fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+}
+
+.section-fadein.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .section-head{ margin: 34px 0 14px; }
 .h2{ 
-  margin:0; 
-  font-size: 22px; 
+  margin: 28px auto 24px;
+  font-size: 28px; 
   letter-spacing:-0.01em; 
   color: rgba(232,242,255,.96);
+  text-align: center;
+  font-weight: 700;
+  display: block;
+  width: 100%;
   background: linear-gradient(90deg, var(--neon), var(--neon3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -27,6 +27,23 @@
     });
   }
 
+  // Smooth scroll-reveal for main content blocks (same as Contact page)
+  const sectionEls = document.querySelectorAll('.section-fadein');
+  if (sectionEls.length) {
+    const io2 = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io2.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+    );
+    sectionEls.forEach((el) => io2.observe(el));
+  }
+
   // Simple mobile nav toggle (matches markup pattern).
   const toggle = document.querySelector('[data-nav-toggle]');
   const nav = document.querySelector('.nav');
@@ -104,14 +121,6 @@
     const toggleBtn = card.querySelector('[data-project-details-toggle]');
     if (!toggleBtn) return;
 
-    const toggleLink = toggleBtn.querySelector('[data-project-details-url]');
-    if (toggleLink) {
-      toggleLink.addEventListener('click', (e) => {
-        e.stopPropagation();
-      });
-    }
-
-    // Animate skill tags on card reveal
     const skillTags = card.querySelectorAll('.skill-list li');
     const cardObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -123,10 +132,15 @@
         }
       });
     }, { threshold: 0.2 });
-    
     cardObserver.observe(card);
 
     toggleBtn.addEventListener('click', () => {
+      const url = toggleBtn.getAttribute('data-project-details-url');
+      if (url && url !== 'YOUR_PROJECT_URL_HERE') {
+        window.open(url, '_blank', 'noopener');
+        return;
+      }
+
       const isExpanded = card.classList.toggle('is-expanded');
       toggleBtn.setAttribute('aria-expanded', String(isExpanded));
 
