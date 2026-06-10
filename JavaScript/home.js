@@ -410,5 +410,28 @@ document.addEventListener('DOMContentLoaded', () => {
   injectIconsInto('skills-container', ICONS.skills);
   injectIconsInto('frameworks-container', ICONS.frameworks);
   injectIconsInto('tools-container', ICONS.tools);
+
+  // ------------------------------
+  // Tech Ticker - Seamless Infinite Scroll
+  // ------------------------------
+  function initTechTicker() {
+    const track = document.getElementById('tech-ticker');
+    if (!track) return;
+
+    const items = Array.from(track.children);
+    const itemCount = items.length;
+
+    // Duplicate items for seamless loop (need 2x for CSS 50% animation)
+    for (let i = 0; i < itemCount; i++) {
+      const clone = items[i].cloneNode(true);
+      track.appendChild(clone);
+    }
+
+    // Ensure animation runs smoothly
+    const totalItems = track.children.length;
+    track.style.width = 'max-content';
+  }
+
+  initTechTicker();
 });
 
