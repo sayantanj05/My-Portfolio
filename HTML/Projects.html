@@ -1,643 +1,1247 @@
 <!doctype html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Portfolio - Projects</title>
+
   <link rel="stylesheet" href="../CSS/Home.css" />
+
   <link rel="stylesheet" href="../CSS/Projects.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <script defer src="../JavaScript/projects.js"></script>
+
 </head>
+
 <body>
+
   <div class="bg" aria-hidden="true">
+
     <svg class="network-nodes" viewBox="0 0 1200 800" preserveAspectRatio="none" role="presentation">
+
       <g>
+
         <line class="n-line" x1="120" y1="140" x2="240" y2="220" />
+
         <line class="n-line" x1="240" y1="220" x2="360" y2="160" />
+
         <line class="n-line" x1="360" y1="160" x2="520" y2="250" />
+
         <line class="n-line" x1="520" y1="250" x2="660" y2="190" />
+
         <line class="n-line" x1="660" y1="190" x2="820" y2="300" />
+
         <line class="n-line" x1="820" y1="300" x2="980" y2="240" />
+
         <line class="n-line" x1="980" y1="240" x2="1060" y2="360" />
 
+
+
         <line class="n-line" x1="120" y1="300" x2="260" y2="360" />
+
         <line class="n-line" x1="260" y1="360" x2="420" y2="320" />
+
         <line class="n-line" x1="420" y1="320" x2="560" y2="420" />
+
         <line class="n-line" x1="560" y1="420" x2="720" y2="360" />
+
         <line class="n-line" x1="720" y1="360" x2="860" y2="470" />
+
         <line class="n-line" x1="860" y1="470" x2="1040" y2="410" />
 
+
+
         <line class="n-line" x1="160" y1="520" x2="320" y2="500" />
+
         <line class="n-line" x1="320" y1="500" x2="460" y2="560" />
+
         <line class="n-line" x1="460" y1="560" x2="620" y2="520" />
+
         <line class="n-line" x1="620" y1="520" x2="760" y2="610" />
+
         <line class="n-line" x1="760" y1="610" x2="920" y2="560" />
+
       </g>
+
+
 
       <g>
+
         <circle class="n-node n1" cx="120" cy="140" r="4.6" />
+
         <circle class="n-node n2" cx="240" cy="220" r="3.8" />
+
         <circle class="n-node" cx="360" cy="160" r="4.2" />
+
         <circle class="n-node n3" cx="520" cy="250" r="4.6" />
+
         <circle class="n-node" cx="660" cy="190" r="3.9" />
+
         <circle class="n-node n2" cx="820" cy="300" r="4.4" />
+
         <circle class="n-node" cx="980" cy="240" r="3.7" />
+
         <circle class="n-node n3" cx="1060" cy="360" r="4.5" />
 
+
+
         <circle class="n-node" cx="120" cy="300" r="3.9" />
+
         <circle class="n-node n2" cx="260" cy="360" r="4.6" />
+
         <circle class="n-node" cx="420" cy="320" r="3.7" />
+
         <circle class="n-node n3" cx="560" cy="420" r="4.4" />
+
         <circle class="n-node" cx="720" cy="360" r="3.8" />
+
         <circle class="n-node n2" cx="860" cy="470" r="4.3" />
+
         <circle class="n-node" cx="1040" cy="410" r="3.9" />
 
+
+
         <circle class="n-node n3" cx="160" cy="520" r="4.2" />
+
         <circle class="n-node" cx="320" cy="500" r="3.6" />
+
         <circle class="n-node n2" cx="460" cy="560" r="4.5" />
+
         <circle class="n-node" cx="620" cy="520" r="3.9" />
+
         <circle class="n-node n3" cx="760" cy="610" r="4.2" />
+
         <circle class="n-node" cx="920" cy="560" r="3.8" />
+
       </g>
+
     </svg>
+
   </div>
 
 
+
+
+
   <header class="nav" id="top">
+
     <div class="brand">
+
       <span class="brand-dot" aria-hidden="true"></span>
+
       <span class="brand-glow">MY PORTFOLIO &raquo;</span>
+
     </div>
 
+
+
    <nav class="nav-links" aria-label="Primary">
+
       <a class="nav-link" href="./Home.html" data-link>Home</a>
+
             <a class="nav-link" href="./About.html" data-link>About</a>
+
       <a class="nav-link active" href="./Projects.html" data-link>Projects</a>
+
        <a class="nav-link" href="./Certifications.html" data-link>Skills & Certifications</a>
+
       <a class="nav-link" href="./Contact.html" data-link>Contact</a>
+
     </nav>
+
     
+
     <button class="nav-toggle" aria-label="Open menu" data-nav-toggle>
+
       <span></span><span></span><span></span>
+
     </button>
+
   </header>
 
+
+
   <main class="wrap">
+
     <section class="section-head reveal section-fadein">
+
       <h2 class="h2" style="color:aliceblue;">Featured Projects</h2>
+
       <p class="muted"></p>
+
     </section>
 
+
+
     <!-- Project Tabs (filterable) -->
+
     <section class="projects-tabs section-fadein" aria-label="Project status filters">
+
       <div class="projects-tabs-inner" data-project-tabs role="tablist" aria-label="Filter projects by status">
+
         <button type="button" class="projects-tab is-active" role="tab" aria-selected="true" data-project-tab="all">All</button>
+
         <button type="button" class="projects-tab" role="tab" aria-selected="false" data-project-tab="completed">Completed</button>
+
         <button type="button" class="projects-tab" role="tab" aria-selected="false" data-project-tab="in-progress">In Progress</button>
+
         <button type="button" class="projects-tab" role="tab" aria-selected="false" data-project-tab="planned">Planned</button>
+
       </div>
+
     </section>
+
+
 
     <div class="projects-list" aria-label="Projects list">
 
+
+
 <!-- Horizontal Project Details card: Project 1 -->
+
        <section class="project-details reveal status-card stagger-1" data-project-status="completed" aria-labelledby="project-title-goandstudy">
+
         <span class="status-pill status-completed" aria-label="Status: Completed">Completed</span>
 
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-goandstudy">GoAndStudy: Smart Library Management with AI-Powered Book Recommendations System</h3>
 
+
+
           <p class="project-details-desc">
+
             <span class="project-details-desc-preview">
+
+              Built an intelligent library management system with AI-powered recommendations using vector search, RAG chatbot, and real-time dashboards for seamless library operations.
+
             </span>
-            <span class="project-details-desc-full" aria-hidden="true">
-            </span>
+
+           
           </p>
 
-          <!-- Impact / Results (reserved section) -->
-          <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>Role-based dashboards with real-time loan/fine updates.</li>
-              <li>Vector search + RAG chatbot for contextual recommendations.</li>
-              <li>Reranking pipeline integrated with NVIDIA NIM APIs.</li>
-            </ul>
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">Python</span>
+
+              <span class="tech-badge">FastAPI</span>
+
+              <span class="tech-badge">MongoDB</span>
+
+              <span class="tech-badge">ChromaDB</span>
+
+              <span class="tech-badge">NVIDIA NIM</span>
+
+              <span class="tech-badge">Spring Boot</span>
+
+              <span class="tech-badge">React</span>
+
+              <span class="tech-badge">ClickHouse</span>
+
+              <span class="tech-badge">Docker</span>
+
+              <span class="tech-badge">Scikit-learn</span>
+
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="https://example.com" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/GoAndStudy" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>MongoDB</li>
-              <li>Node.js</li>
-              <li>Database Design</li>
-              <li>REST APIs</li>
-              <li>Systems Design</li>
-              <li>Java</li>
-              <li>Spring Boot</li>
-              <li>JWT</li>
-              <li>Tailwind CSS</li>
-              <li>React.js</li>
-              <li>Socket.io</li>
-              <li>Python</li>
-              <li>Data Visualization</li>
-              <li>Data Warehousing</li>
-              <li>ETL</li>
-              <li>FastAPI</li>
-            </ul>
-          </div>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <a href="https://goandstudy.onrender.com/" target="_blank" class="project-image-link" aria-label="View GoAndStudy project">
+
+            <div class="project-image-wrap" aria-label="GoAndStudy project image">
+
+              <img class="project-image" src="../Asset/Projects_images/GoAndStudy.png" alt="GoAndStudy" loading="lazy"  />
+
+              <div class="project-image-overlay">
+
+                <span class="project-image-overlay-text">View Project</span>
+
+              </div>
+
+            </div>
+
+          </a>
+
         </div>
+
       </section>
+
+
 
 <!-- Horizontal Project Details card: Project 2 -->
+
        <section class="project-details reveal status-card stagger-2" data-project-status="in-progress" aria-labelledby="project-title-enjoy">
+
         <span class="status-pill status-in-progress" aria-label="Status: In Progress">In Progress</span>
 
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-enjoy">EnjoyTheLife: Smart Tourism Management and AI-Powered Tourist Place Recommendations System</h3>
 
+
+
           <p class="project-details-desc">
+
             <span class="project-details-desc-preview">
+
+              Developed an intelligent tourism management system with AI-powered recommendations using semantic search, reranking, and user behavior personalization.
+
             </span>
-            <span class="project-details-desc-full" aria-hidden="true">
-            </span>
+
+           
+
           </p>
 
-          <!-- Impact / Results (reserved section) -->
-          <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>Recommendation engine using semantic search + reranking.</li>
-              <li>Personalization from user preferences and behavior signals.</li>
-              <li>Scalable backend architecture for real-time updates.</li>
-            </ul>
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">Python</span>
+
+              <span class="tech-badge">FastAPI</span>
+
+              <span class="tech-badge">PostgreSQL</span>
+
+              <span class="tech-badge">ChromaDB</span>
+
+              <span class="tech-badge">React</span>
+
+              <span class="tech-badge">Redis</span>
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="YOUR_PROJECT_URL_HERE" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/EnjoyTheLife" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>MongoDB</li>
-              <li>Node.js</li>
-              <li>Database Design</li>
-              <li>REST APIs</li>
-              <li>Systems Design</li>
-              <li>Java</li>
-              <li>Spring Boot</li>
-              <li>RAG</li>
-              <li>JWT</li>
-              <li>Tailwind CSS</li>
-              <li>Vue.js</li>
-              <li>Socket.io</li>
-              <li>Python</li>
-              <li>Data Visualization</li>
-              <li>ClickHouse Warehouse</li>
-              <li>ETL</li>
-              <li>FastAPI</li>
-              <li>C++</li>
-              <li>PostgreSQL</li>
-              <li>ChromaDB</li>
-            </ul>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <div class="project-image-wrap" aria-label="EnjoyTheLife project image">
+
+            <img class="project-image" src="../Asset/Projects_images/EnjoyTheLife.jpeg" alt="EnjoyTheLife" loading="lazy" />
+
+            <div class="project-image-overlay">
+
+              <span class="project-image-overlay-text">View Project</span>
+
+            </div>
+
           </div>
+
         </div>
+
+
 
         <div class="project-progress" aria-label="Progress: 65%">
+
           <div class="progress-row">
+
             <div class="progress-top">
+
               <span class="progress-label">65%</span>
+
             </div>
+
             <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65">
+
               <span class="progress-fill" style="--progress:65%"></span>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
+
+
 
 <!-- Horizontal Project Details card: Project 3 -->
+
        <section class="project-details reveal status-card stagger-3" data-project-status="completed" aria-labelledby="project-title-finguard">
+
         <span class="status-pill status-completed" aria-label="Status: Completed">Completed</span>
 
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-finguard">FinGuard: Real-Time Fraud Detection & Smart Transaction Monitoring System</h3>
 
+
+
           <p class="project-details-desc">
-            <span class="project-details-desc-preview"></span>
-            <span class="project-details-desc-full" aria-hidden="true"></span>
+
+            <span class="project-details-desc-preview">
+
+              Built a low-latency fraud detection system with real-time transaction monitoring, ML-based fraud scoring, and comprehensive audit trails for instant threat identification.
+
+            </span>
+
+            
+
           </p>
 
-          <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>Low-latency monitoring for suspicious transaction patterns.</li>
-              <li>Fraud scoring pipeline for risk-based decisioning.</li>
-              <li>Clear audit trail for investigative workflows.</li>
-            </ul>
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">Python</span>
+
+              <span class="tech-badge">FastAPI</span>
+
+              <span class="tech-badge">PostgreSQL</span>
+
+              <span class="tech-badge">Redis</span>
+
+              <span class="tech-badge">scikit-learn</span>
+
+              <span class="tech-badge">Kafka</span>
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="YOUR_PROJECT_URL_HERE" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/FinGuard" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>React.js</li>
-              <li>HTML</li>
-              <li>Database Design</li>
-              <li>Bootstrap</li>
-              <li>CSS</li>
-              <li>Systems Design</li>
-              <li>Php</li>
-              <li>MySQL</li>
-              <li>Tailwind CSS</li>
-            </ul>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <div class="project-image-wrap" aria-label="FinGuard project image">
+
+            <img class="project-image" src="../Asset/Projects_images/FinGuard.jpg" alt="FinGuard" loading="lazy" />
+
+            <div class="project-image-overlay">
+
+              <span class="project-image-overlay-text">View Project</span>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
+
+
 
 <!-- Horizontal Project Details card: Project 4 -->
+
        <section class="project-details reveal status-card stagger-4" data-project-status="completed" aria-labelledby="project-title-price">
+
         <span class="status-pill status-completed" aria-label="Status: Completed">Completed</span>
 
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-price">PriceCompromise: Real-Time Real Estate Price Prediction System</h3>
 
+
+
           <p class="project-details-desc">
-            <span class="project-details-desc-preview"></span>
-            <span class="project-details-desc-full" aria-hidden="true"></span>
+
+            <span class="project-details-desc-preview">
+
+              Developed a real-time price prediction system using advanced ML models, feature engineering, and optimized system design for instant property valuation.
+
+            </span>
+
+            
+
           </p>
 
-          <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>Feature engineering for improved price prediction accuracy.</li>
-              <li>System design for fast prediction under real-time queries.</li>
-              <li>Data-driven insights for decision support.</li>
-            </ul>
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">Python</span>
+
+              <span class="tech-badge">FastAPI</span>
+
+              <span class="tech-badge">PostgreSQL</span>
+
+              <span class="tech-badge">scikit-learn</span>
+
+              <span class="tech-badge">XGBoost</span>
+
+              <span class="tech-badge">Pandas</span>
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="YOUR_PROJECT_URL_HERE" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/PriceCompromise" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>React.js</li>
-              <li>HTML</li>
-              <li>Database Design</li>
-              <li>Bootstrap</li>
-              <li>CSS</li>
-              <li>Systems Design</li>
-              <li>Php</li>
-              <li>MySQL</li>
-              <li>Tailwind CSS</li>
-            </ul>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <div class="project-image-wrap" aria-label="PriceCompromise project image">
+
+            <img class="project-image" src="../Asset/Projects_images/PriceCompromise.jpg" alt="PriceCompromise" loading="lazy" />
+
+            <div class="project-image-overlay">
+
+              <span class="project-image-overlay-text">View Project</span>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
+
+
 
 <!-- Horizontal Project Details card: Project 5 -->
+
        <section class="project-details reveal status-card stagger-5" data-project-status="in-progress" aria-labelledby="project-title-eat">
+
         <span class="status-pill status-in-progress" aria-label="Status: In Progress">In Progress</span>
 
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-eat">EatEnjoyRepeat: Multi-Cuisine Restaurant Billing & Ordering & AI-Powered Food Recommendations System</h3>
 
+
+
           <p class="project-details-desc">
+
             <span class="project-details-desc-preview">
+
+              Developed a comprehensive restaurant management system with streamlined ordering/billing workflows and AI-powered food recommendations for enhanced customer experience.
+
             </span>
-            <span class="project-details-desc-full" aria-hidden="true"></span>
+
+            
+
           </p>
 
-          <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>Streamlined ordering + billing workflow for multi-cuisine operations.</li>
-              <li>Recommendation layer to improve menu discovery and conversion.</li>
-              <li>Practical system architecture for production-like deployments.</li>
-            </ul>
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">Java</span>
+
+              <span class="tech-badge">Spring Boot</span>
+
+              <span class="tech-badge">PostgreSQL</span>
+
+              <span class="tech-badge">React</span>
+
+              <span class="tech-badge">ChromaDB</span>
+
+              <span class="tech-badge">Redis</span>
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="YOUR_PROJECT_URL_HERE" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/EatEnjoyRepeat" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>React.js</li>
-              <li>HTML</li>
-              <li>Database Design</li>
-              <li>Bootstrap</li>
-              <li>CSS</li>
-              <li>Systems Design</li>
-              <li>Php</li>
-              <li>MySQL</li>
-              <li>Tailwind CSS</li>
-            </ul>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <div class="project-image-wrap" aria-label="EatEnjoyRepeat project image">
+
+            <img class="project-image" src="../Asset/Projects_images/EatEnjoyRepeat.jpg" alt="EatEnjoyRepeat" loading="lazy" style="height:280px " />
+
+            <div class="project-image-overlay">
+
+              <span class="project-image-overlay-text">View Project</span>
+
+            </div>
+
           </div>
+
         </div>
+
+
 
         <div class="project-progress" aria-label="Progress: 40%">
+
           <div class="progress-row">
+
             <div class="progress-top">
+
               <span class="progress-label">40%</span>
+
             </div>
+
             <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
+
               <span class="progress-fill" style="--progress:40%"></span>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
+
+
 
 <!-- Horizontal Project Details card: Project 6 -->
+
        <section class="project-details reveal status-card stagger-6" data-project-status="planned" aria-labelledby="project-title-glow">
+
         <span class="status-pill status-planned" aria-label="Status: Planned">Planned</span>
 
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-glow">Glow: AI-Powered Personalized Skincare Product Recommendation System & E-Commerce Platform</h3>
 
+
+
           <p class="project-details-desc">
+
             <span class="project-details-desc-preview">
+
+              Building an AI-powered skincare recommendation platform with personalized routine generation and integrated e-commerce for seamless product discovery and purchase.
+
             </span>
-            <span class="project-details-desc-full" aria-hidden="true"></span>
+
+          
+
           </p>
 
-          <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>Personalization pipeline for skincare routine generation.</li>
-              <li>Recommendation layer to match products to user needs.</li>
-              <li>Integrated e-commerce UX for frictionless discovery.</li>
-            </ul>
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">Python</span>
+
+              <span class="tech-badge">FastAPI</span>
+
+              <span class="tech-badge">PostgreSQL</span>
+
+              <span class="tech-badge">ChromaDB</span>
+
+              <span class="tech-badge">React</span>
+
+              <span class="tech-badge">Stripe</span>
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="YOUR_PROJECT_URL_HERE" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/Glow" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>React.js</li>
-              <li>HTML</li>
-              <li>Database Design</li>
-              <li>Bootstrap</li>
-              <li>CSS</li>
-              <li>Systems Design</li>
-              <li>Php</li>
-              <li>MySQL</li>
-              <li>Tailwind CSS</li>
-            </ul>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <div class="project-image-wrap" aria-label="Glow project image">
+
+            <img class="project-image" src="../Asset/Projects_images/Glow.png" alt="Glow" loading="lazy" />
+
+            <div class="project-image-overlay">
+
+              <span class="project-image-overlay-text">View Project</span>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
+
+
 
 <!-- Horizontal Project Details card: Project 7 (Planned) -->
+
        <section class="project-details reveal status-card stagger-7" data-project-status="planned" aria-labelledby="project-title-aura">
+
         <span class="status-pill status-planned" aria-label="Status: Planned">Planned</span>
 
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-aura">AuraFitness: Intelligent Gym Management System & Predictive Health Architecture</h3>
 
+
+
           <p class="project-details-desc">
+
             <span class="project-details-desc-preview">
+
+              Building an intelligent gym management system with AI-powered form correction, real-time biometric tracking, predictive health analytics, and context-aware fitness recommendations.
+
             </span>
-            <span class="project-details-desc-full" aria-hidden="true"></span>
+
+           
           </p>
 
-          <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>Built a low-latency C++ server with MediaPipe and OpenCV to process live 30+ FPS video for instant form correction.</li>
-              <li>Developed a highly responsive Kotlin app utilizing WebSockets and Jetpack Compose for real-time biometric and video telemetry tracking.</li>
-              <li>Separated core relational data in PostgreSQL while streaming massive, high-frequency wearable logs into ClickHouse for instant analytics.</li>
-              <li>Integrated tabular ML for member churn forecasting alongside a ChromaDB-powered RAG chatbot for real-time, context-aware fitness advice.</li>
-            </ul>
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">C++</span>
+
+              <span class="tech-badge">Kotlin</span>
+
+              <span class="tech-badge">PostgreSQL</span>
+
+              <span class="tech-badge">ClickHouse</span>
+
+              <span class="tech-badge">MediaPipe</span>
+
+              <span class="tech-badge">ChromaDB</span>
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="YOUR_PROJECT_URL_HERE" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/AuraFitness" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>Python</li>
-              <li>C++</li>
-              <li>Kotlin</li>
-              <li>Java</li>
-              <li>Docker</li>
-              <li>System Design</li>
-              <li>OpenCV</li>
-              <li>ChromaDB</li>
-              <li>Postgersql</li>
-            </ul>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <div class="project-image-wrap" aria-label="AuraFitness project image">
+
+            <img class="project-image" src="../Asset/Projects_images/GoAndStudy.png" alt="AuraFitness" loading="lazy" />
+
+            <div class="project-image-overlay">
+
+              <span class="project-image-overlay-text">View Project</span>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
 
+
+
 <!-- Horizontal Project Details card: Project 8 -->
+
        <section class="project-details reveal status-card stagger-7" data-project-status="in-progress" aria-labelledby="project-title-nexusgpt">
+
         <span class="status-pill status-in-progress" aria-label="Status: In Progress">In Progress</span>
 
 
+
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-nexusgpt">NexusGPT: AI-Powered Conversational Chatbot</h3>
 
+
+
           <p class="project-details-desc">
-            
+
+            <span class="project-details-desc-preview">
+
+              Developed a modern, browser-accessible AI chatbot interface with smooth animations, responsive design, and intuitive input for effortless AI communication.
+
+            </span>
+
+          
+
           </p>
 
-            <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>NexusGPT is designed as a modern, browser-accessible AI chatbot interface.</li>
-              <li>It offers smooth chat animations and adapts seamlessly across devices.</li>
-              <li> The input interface is intuitive, enabling effortless communication with AI models.</li>
-            </ul>
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">React</span>
+
+              <span class="tech-badge">TypeScript</span>
+
+              <span class="tech-badge">OpenAI API</span>
+
+              <span class="tech-badge">Tailwind CSS</span>
+
+              <span class="tech-badge">Vercel</span>
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="YOUR_PROJECT_URL_HERE" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/NexusGPT" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>Database Management System (DBMS)</li>
-              <li>Generative AI</li>
-              <li>JSON</li>
-              <li>Cascading Style Sheets (CSS)</li>
-              <li>Artificial Intelligence (AI)</li>
-              <li>JavaScript</li>
-              <li>Systems Design</li>
-              <li>Python (Programming Language)</li>
-              <li>HTML</li>
-            </ul>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <div class="project-image-wrap" aria-label="NexusGPT project image">
+
+            <img class="project-image" src="../Asset/Projects_images/NexusGPT.png" alt="NexusGPT" loading="lazy" />
+
+            <div class="project-image-overlay">
+
+              <span class="project-image-overlay-text">View Project</span>
+
+            </div>
+
           </div>
+
         </div>
+
+
 
         <div class="project-progress" aria-label="Progress: 70%">
+
           <div class="progress-row">
+
             <div class="progress-top">
+
               <span class="progress-label">70%</span>
+
             </div>
+
             <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
+
               <span class="progress-fill" style="--progress:70%"></span>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
+
+
 
 <!-- Horizontal Project Details card: Project 9 -->
+
        <section class="project-details reveal status-card stagger-1" data-project-status="completed" aria-labelledby="project-title-digital-number-operation-calculator">
+
         <span class="status-pill status-completed" aria-label="Status: Completed">Completed</span>
 
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-digital-number-operation-calculator">Digital Number Operation Calculator</h3>
 
+
+
           <p class="project-details-desc">
-            <span class="project-details-desc-preview"></span>
-            <span class="project-details-desc-full" aria-hidden="true"></span>
+
+            <span class="project-details-desc-preview">
+
+              Built a fully interactive web application that performs arithmetic operations across all major number systems with instant conversion and calculation capabilities.
+
+            </span>
+
+         
+
           </p>
 
-          <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>Developed a fully interactive web application that performs arithmetic operations (Addition, Subtraction, Multiplication, Division) across Binary, Decimal, Octal, and Hexadecimal number systems.</li>
-            </ul>
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">HTML</span>
+
+              <span class="tech-badge">CSS</span>
+
+              <span class="tech-badge">JavaScript</span>
+
+              <span class="tech-badge">GitHub Pages</span>
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="YOUR_PROJECT_URL_HERE" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/Digital-Number-Operation-Calculator" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <a href="https://sayantanj05.github.io/Digital-Number-Operation-Calculator/" target="_blank" class="project-image-link" aria-label="View Digital Number Operation Calculator project">
+
+            <div class="project-image-wrap" aria-label="Digital Number Operation Calculator project image">
+
+              <img class="project-image" src="../Asset/Projects_images/Digital Number Operation.png" alt="Digital Number Operation" loading="lazy" />
+
+              <div class="project-image-overlay">
+
+                <span class="project-image-overlay-text">View Project</span>
+
+              </div>
+
+            </div>
+
+          </a>
+
         </div>
+
       </section>
 
+
+
 <!-- Horizontal Project Details card: Project 10 -->
+
        <section class="project-details reveal status-card stagger-7" data-project-status="completed" aria-labelledby="project-title-stockflow">
+
         <span class="status-pill status-completed" aria-label="Status: Completed">Completed</span>
 
+
+
         <div class="project-details-left">
+
           <div class="project-details-label"></div>
+
           <h3 class="project-details-title" id="project-title-stockflow">StockFlow: Inventory Management System</h3>
 
 
-          <p class="project-details-desc">
+
+  <p class="project-details-desc">
+
             <span class="project-details-desc-preview">
+
+              Built a fully interactive web application that performs arithmetic operations across all major number systems with instant conversion and calculation capabilities.
+
             </span>
-            <span class="project-details-desc-full" aria-hidden="true"></span>
+
+         
+
           </p>
 
-          <div class="project-impact" aria-label="Results and impact">
-            <div class="impact-label">Key Points</div>
-            <ul class="impact-list">
-              <li>Efficient stock tracking and inventory organization.</li>
-              <li>Improved operational visibility with clean data flows.</li>
-              <li>Reusable patterns for dashboard and CRUD modules.</li>
-            </ul>
+          <!-- Problem-Solution-Impact Section -->
+
+         
+
+
+
+          <!-- Tech Stack -->
+
+          <div class="project-tech-stack">
+
+            <div class="tech-stack-label">Tech Stack</div>
+
+            <div class="tech-stack-icons">
+
+              <span class="tech-badge">React</span>
+
+              <span class="tech-badge">Node.js</span>
+
+              <span class="tech-badge">MongoDB</span>
+
+              <span class="tech-badge">Express</span>
+
+              <span class="tech-badge">Vercel</span>
+
+            </div>
+
           </div>
 
-          <button class="project-details-toggle" type="button" data-project-details-toggle data-project-details-url="YOUR_PROJECT_URL_HERE" aria-expanded="false">
-            <span class="toggle-link-wrap" aria-hidden="true">
-              <span class="toggle-link">View Project</span>
-            </span>
-          </button>
+
+
+          <!-- Key Features -->
+
+         
+
+
+
+          <!-- Project Links -->
+
+          <div class="project-links">
+
+            <a href="https://github.com/sayantanj05/StockFlow" target="_blank" class="project-link github-link">
+
+              <i class="fab fa-github"></i> View Code
+
+            </a>
+
+          </div>
+
+
+
         </div>
 
-        <div class="project-details-right" aria-label="Skillset">
-          <div class="project-details-meta">
-            <div class="meta-label">Skills</div>
-            <ul class="skill-list" aria-label="Skills">
-              <li>React.js</li>
-              <li>HTML</li>
-              <li>Database Design</li>
-              <li>Bootstrap</li>
-              <li>CSS</li>
-              <li>Systems Design</li>
-              <li>Php</li>
-              <li>MySQL</li>
-              <li>Tailwind CSS</li>
-            </ul>
-          </div>
+
+
+        <div class="project-details-right" aria-label="Project image">
+
+          <a href="https://stockflow-rosy.vercel.app/" target="_blank" class="project-image-link" aria-label="View StockFlow project">
+
+            <div class="project-image-wrap" aria-label="StockFlow project image">
+
+              <img class="project-image" src="../Asset/Projects_images/Stockflow.jpg" alt="StockFlow" loading="lazy" />
+
+              <div class="project-image-overlay">
+
+                <span class="project-image-overlay-text">View Project</span>
+
+              </div>
+
+            </div>
+
+          </a>
+
         </div>
+
       </section>
+
+
 
 </div>
 
+
+
   </main>
+
   <footer class="site-footer">
+
     <div class="footer-left">© 2026 Sayantan Jana | Built with Neon Black Theme</div>
+
     <a href="./Projects.html" class="back-to-top" aria-label="Back to top">
+
       <i class="fas fa-arrow-up"></i>
+
     </a>
+
   </footer>
+
 </body>
+
 </html>
+
+
 
