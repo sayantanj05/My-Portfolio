@@ -1103,8 +1103,7 @@ html {
   width: 70px;
   height: auto;
   max-height: 80vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: visible;
   user-select: none;
   padding: 16px 8px;
   transition: all 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1177,7 +1176,7 @@ html {
   transition: all 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   white-space: nowrap;
   flex-shrink: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .floating-sidebar:hover .sidebar-item {
@@ -1204,18 +1203,7 @@ html {
   box-shadow: 0 0 15px #00d9ff;
 }
 
-.sidebar-item.is-active::before {
-  content: "";
-  position: absolute;
-  left: -12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #bff8ff, #00d4ff);
-  box-shadow: 0 0 14px rgba(0, 212, 255, 1);
-}
+
 
 .sidebar-icon {
   flex: 0 0 auto;
@@ -1256,9 +1244,9 @@ html {
 
 .sidebar-label {
   position: absolute;
-  bottom: 120%; /* Position above the icon */
-  left: 50%;
-  transform: translateX(-50%) translateY(10px); /* Center it and offset slightly */
+  right: 125%; /* Position to the left of the button */
+  top: 50%;
+  transform: translateY(-50%) translateX(10px); /* Center vertically and offset slightly */
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(57, 246, 255, 0.1));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1277,20 +1265,20 @@ html {
   text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 .sidebar-label::after {
-   content: "";
+  content: "";
   position: absolute;
-  top: 100%; /* At the bottom of the tooltip */
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  left: 100%; /* At the right side of the tooltip */
+  transform: translateY(-50%);
   border-width: 6px;
   border-style: solid;
-  border-color: rgba(0, 212, 255, 0.4) transparent transparent transparent;
+  border-color: transparent transparent transparent rgba(0, 212, 255, 0.4);
 }
 
 .sidebar-item:hover .sidebar-label {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0); /* Slide into position */
+  transform: translateY(-50%) translateX(0); /* Slide into position */
 }
 
 
@@ -1368,10 +1356,19 @@ html {
   }
 
   .sidebar-item.is-active::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #bff8ff, #00d4ff);
+    box-shadow: 0 0 14px rgba(0, 212, 255, 1);
     left: 50%;
     top: auto;
     bottom: -6px;
     transform: translateX(-50%);
+    opacity: 1;
+    visibility: visible;
   }
 }
 
