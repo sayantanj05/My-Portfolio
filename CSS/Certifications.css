@@ -203,6 +203,7 @@
   opacity: 0.9;
   animation: iconShimmer 3s ease-in-out infinite;
   animation-delay: calc(var(--icon-index) * 0.2s);
+  mix-blend-mode: multiply;
 }
 
 .skills-category__icons:hover .skills-icon{
