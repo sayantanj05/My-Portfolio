@@ -433,5 +433,87 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initTechTicker();
+
+  // ==========================
+  // Mechanized voice intro
+  // ==========================
+  const voiceBtn = $('#voiceBtn');
+
+  if (voiceBtn) {
+    const myStory =
+      "Hello! I'm Sayontang Jana. " +
+      "I am a Backend Engineer and System Architect. " +
+      "Currently pursuing BCA Honours at Brainware University, " +
+      "I specialize in building scalable systems using Java, Spring Boot, Database Management and DevOps. " +
+      "My goal is to bridge complex technology with real-world business requirements,"+
+
+      "Currently I am learning about System Designing, Cloud Architecture, and AI Application Building, "+
+      "Later I will learn Android Development to build cross-platform applications, "+
+    
+      "I am also exploring Web Development to build modern web applications, "+
+      "Currently I am building my personal Full Stack AI Integrated web application projects ,"+
+      "Like A Library Management System with Book Recommendation, A Fraud Detection System with Smart Transaction Monitoring, A Realtime House Price Prediction System etc."+
+      "In all this projects I have use machine learning algorithms to build those recommendation,dectection and prediction engines.I also uses Spring Boot for secure and scalable backend development and react for Frontend UI,"+
+      "I am also planning to built innovative projects like A AI Powered Personalized Skincare Product Recommendation System & E-Commerce Platform where I would use Computer Vision and Image Processing Technology where my system will analyze customer skin texture or issues and recommend suitable products so that customer can get the best skincare experience and buy those products, "
+      "Also I planned Building an intelligent gym management system with AI-powered form correction, real-time biometric tracking, predictive health analytics, and context-aware fitness recommendations, "+
+      
+      "My Ultimate Career goal is become a Backend Engineer and System Architect capable of designing scalable, reliable, and intelligent software systems that solve real-world problems.";
+
+    const utter = new SpeechSynthesisUtterance(myStory);
+    utter.rate = 0.95;
+    utter.pitch = 0.8;
+    utter.volume = 1.0;
+
+    const voices = speechSynthesis.getVoices();
+    function matchFemaleVoice(list) {
+      const n = (v) => (v.name || '').toLowerCase();
+      const femaleNames = [
+        'zira', 'samantha', 'karen', 'moira', 'fiona', 
+        'victoria', 'google uk english female', 'google us english',
+        'ting-ting', 'female', 'kate', 'allison', 'ava', 'emma'
+      ];
+      const female = list.find(v => v.lang.startsWith('en') && femaleNames.some(fn => n(v).includes(fn)));
+      return female || list.find(v => v.lang.startsWith('en-US')) || list.find(v => v.lang.startsWith('en')) || list[0];
+    }
+    const bestVoice = matchFemaleVoice(voices);
+    if (bestVoice) utter.voice = bestVoice;
+
+    let isSpeaking = false;
+
+    voiceBtn.addEventListener('click', () => {
+      if (isSpeaking) {
+        speechSynthesis.cancel();
+        voiceBtn.classList.remove('is-speak');
+        voiceBtn.textContent = '▶ Listen to my story';
+        isSpeaking = false;
+        return;
+      }
+
+      speechSynthesis.speak(utter);
+      voiceBtn.classList.add('is-speak');
+      voiceBtn.innerHTML = '■ Stop';
+      isSpeaking = true;
+    });
+
+    utter.addEventListener('end', () => {
+      voiceBtn.classList.remove('is-speak');
+      voiceBtn.innerHTML = '▶ Listen to my story';
+      isSpeaking = false;
+    });
+
+    utter.addEventListener('error', () => {
+      voiceBtn.classList.remove('is-speak');
+      voiceBtn.innerHTML = '▶ Listen to my story';
+      isSpeaking = false;
+    });
+
+    if (typeof speechSynthesis.onvoiceschanged !== 'undefined') {
+      speechSynthesis.onvoiceschanged = () => {
+        const vs = speechSynthesis.getVoices();
+        const bestVoice = matchFemaleVoice(vs);
+        if (bestVoice) utter.voice = bestVoice;
+      };
+    }
+  }
 });
 

@@ -438,6 +438,19 @@ body{
   box-shadow: 0 0 0 1px rgba(0,191,255,.18), 0 18px 40px rgba(0,0,0,.35);
 }
 
+.voice-btn {
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.voice-btn.is-speak {
+  border-color: rgba(57,246,255,.6);
+  box-shadow: 0 0 22px rgba(0,191,255,.35);
+  background: rgba(0,183,255,.1);
+}
+
 
 .stats{ display:flex; gap: 18px; margin-top: 28px; flex-wrap:wrap; }
 .stat{
