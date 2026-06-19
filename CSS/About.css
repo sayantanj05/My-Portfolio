@@ -105,10 +105,19 @@
 
 @keyframes neonPulse {
   0%, 100% { 
-    box-shadow: 0 0 12px rgba(0, 212, 255, 0.2);
+    box-shadow: 
+      inset 3px 3px 6px rgba(255, 255, 255, 0.12),
+      inset -3px -3px 6px rgba(0, 212, 255, 0.3),
+      0 6px 15px rgba(0, 0, 0, 0.45),
+      0 0 12px rgba(0, 212, 255, 0.25);
   }
   50% { 
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4), 0 0 30px rgba(0, 212, 255, 0.2);
+    box-shadow: 
+      inset 3px 3px 6px rgba(255, 255, 255, 0.12),
+      inset -3px -3px 6px rgba(0, 212, 255, 0.3),
+      0 8px 20px rgba(0, 0, 0, 0.55),
+      0 0 22px rgba(0, 212, 255, 0.5),
+      0 0 35px rgba(0, 212, 255, 0.25);
   }
 }
 
@@ -471,17 +480,27 @@ html {
   font-size: 0.9rem;
   font-weight: 600;
   color: #bff7ff;
-  background: rgba(0, 212, 255, 0.06);
-  border: 1px solid rgba(0, 212, 255, 0.35);
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.2);
-  transition: all 0.3s ease;
+  background: rgba(8, 22, 45, 0.75);
+  border: 1.5px solid rgba(0, 212, 255, 0.45);
+  box-shadow: 
+    inset 3px 3px 6px rgba(255, 255, 255, 0.12),
+    inset -3px -3px 6px rgba(0, 212, 255, 0.3),
+    0 6px 15px rgba(0, 0, 0, 0.45),
+    0 0 12px rgba(0, 212, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.55);
 }
 
 .neon-tag:hover {
-  background: rgba(0, 212, 255, 0.15);
-  border-color: #00d9ff;
-  box-shadow: 0 0 22px rgba(0, 212, 255, 0.4);
-  transform: translateY(-2px);
+  background: rgba(0, 212, 255, 0.18);
+  border-color: #39f6ff;
+  box-shadow: 
+    inset 2px 2px 4px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 6px rgba(57, 246, 255, 0.45),
+    0 10px 20px rgba(0, 0, 0, 0.55),
+    0 0 22px rgba(0, 212, 255, 0.5);
+  transform: translateY(-3px) scale(1.03);
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.85);
 }
 
 /* ==========================
@@ -1092,14 +1111,16 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 28px;
-  background: rgba(4, 8, 18, 0.75);
+  border-radius: 35px;
+  background: rgba(8, 15, 30, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 212, 255, 0.35);
+  border: 2px solid rgba(0, 212, 255, 0.45);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.55),
-    0 0 28px rgba(0, 212, 255, 0.18);
+    inset 4px 4px 8px rgba(255, 255, 255, 0.12),
+    inset -5px -5px 12px rgba(0, 212, 255, 0.25),
+    0 15px 35px rgba(0, 0, 0, 0.65),
+    0 0 30px rgba(0, 212, 255, 0.22);
   width: 70px;
   height: auto;
   max-height: 80vh;
@@ -1110,20 +1131,21 @@ html {
 }
 
 .floating-sidebar:hover {
-  
-  border-color: #00d9ff;
+  border-color: #39f6ff;
   box-shadow:
-    0 18px 50px rgba(0, 0, 0, 0.6),
-    0 0 44px rgba(0, 212, 255, 0.28);
+    inset 3px 3px 6px rgba(255, 255, 255, 0.18),
+    inset -4px -4px 10px rgba(57, 246, 255, 0.35),
+    0 22px 45px rgba(0, 0, 0, 0.7),
+    0 0 45px rgba(0, 212, 255, 0.38);
 }
 
 .sidebar-track {
   position: absolute;
-  left: 26px;
+  left: 33px; /* Centered with 70px width */
   top: 32px;
   bottom: 32px;
-  width: 3px;
-  background: rgba(255, 255, 255, 0.07);
+  width: 4px;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 2px;
   pointer-events: none;
   z-index: 1;
@@ -1135,7 +1157,10 @@ html {
   height: 0%;
   background: linear-gradient(180deg, #00d4ff, #39f6ff);
   border-radius: 2px;
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.8), 0 0 22px rgba(0, 212, 255, 0.5);
+  box-shadow: 
+    inset 1px 0 2px rgba(255, 255, 255, 0.3),
+    0 0 12px rgba(0, 212, 255, 0.8), 
+    0 0 22px rgba(0, 212, 255, 0.5);
   transition: height 0.15s ease-out;
 }
 
@@ -1144,7 +1169,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   padding: 8px 0;
   width: 70px;
   position: relative;
@@ -1167,16 +1192,19 @@ html {
   width: 50px;
   min-height: 48px;
   height: 48px;
-  border-radius: 80px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  border: 1.5px solid rgba(0, 212, 255, 0.3);
+  background: rgba(12, 22, 45, 0.7);
   cursor: pointer;
   padding: 0;
   outline: none;
   transition: all 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   white-space: nowrap;
   flex-shrink: 0;
-  /* overflow: hidden; */
+  box-shadow:
+    inset 2px 2px 4px rgba(255, 255, 255, 0.12),
+    inset -3px -3px 6px rgba(0, 212, 255, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.45);
 }
 
 .floating-sidebar:hover .sidebar-item {
@@ -1187,20 +1215,25 @@ html {
 }
 
 .sidebar-item:hover {
-  justify-content: flex-start;
-  background: rgba(0, 212, 255, 0.12);
-  border-color: rgba(0, 212, 255, 0.65);
+  justify-content: center;
+  background: rgba(0, 212, 255, 0.18);
+  border-color: rgba(57, 246, 255, 0.7);
   box-shadow:
-    0 0 26px rgba(0, 212, 255, 0.26),
-    0 0 54px rgba(0, 212, 255, 0.12),
-    inset 0 0 14px rgba(0, 212, 255, 0.06);
+    inset 2px 2px 4px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 6px rgba(57, 246, 255, 0.35),
+    0 8px 16px rgba(0, 0, 0, 0.55),
+    0 0 18px rgba(0, 212, 255, 0.35);
   transform: translateY(-2px);
 }
 
 .sidebar-item.is-active {
-  background: rgba(0, 217, 255, 0.15);
-  border-color: #00d9ff;
-  box-shadow: 0 0 15px #00d9ff;
+  background: rgba(0, 212, 255, 0.28);
+  border-color: #39f6ff;
+  box-shadow:
+    inset 2.5px 2.5px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 8px rgba(57, 246, 255, 0.55),
+    0 6px 12px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(0, 212, 255, 0.6);
 }
 
 
@@ -1304,11 +1337,21 @@ html {
     flex-direction: row;
     border-radius: 22px;
     padding: 10px 14px;
+    box-shadow:
+      inset 3px 3px 6px rgba(255, 255, 255, 0.12),
+      inset -4px -4px 8px rgba(0, 212, 255, 0.25),
+      0 10px 25px rgba(0, 0, 0, 0.65),
+      0 0 20px rgba(0, 212, 255, 0.22);
   }
 
   .floating-sidebar:hover {
     width: auto;
     height: auto;
+    box-shadow:
+      inset 3px 3px 6px rgba(255, 255, 255, 0.18),
+      inset -4px -4px 8px rgba(57, 246, 255, 0.35),
+      0 12px 30px rgba(0, 0, 0, 0.7),
+      0 0 30px rgba(0, 212, 255, 0.38);
   }
 
   .sidebar-track {
@@ -1335,6 +1378,10 @@ html {
     border-radius: 12px;
     flex-shrink: 0;
     padding: 0;
+    box-shadow:
+      inset 1.5px 1.5px 3px rgba(255, 255, 255, 0.12),
+      inset -2px -2px 4px rgba(0, 212, 255, 0.2),
+      0 3px 6px rgba(0, 0, 0, 0.45);
   }
 
   .floating-sidebar:hover .sidebar-item {
@@ -1345,6 +1392,11 @@ html {
   .sidebar-item:hover {
     width: 42px;
     padding: 0;
+    box-shadow:
+      inset 1.5px 1.5px 3px rgba(255, 255, 255, 0.2),
+      inset -1.5px -1.5px 4px rgba(57, 246, 255, 0.35),
+      0 5px 10px rgba(0, 0, 0, 0.55),
+      0 0 12px rgba(0, 212, 255, 0.3);
   }
 
   .sidebar-label {
@@ -1701,4 +1753,31 @@ html {
     font-size: 0.8rem;
     padding: 5px 12px;
   }
+}
+
+/* Claymorphic back to top overrides */
+.back-to-top {
+  background: rgba(12, 22, 45, 0.7);
+  border: 1.5px solid rgba(0, 212, 255, 0.4) !important;
+  color: #00d9ff !important;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow:
+    inset 2px 2px 4px rgba(255, 255, 255, 0.12),
+    inset -3px -3px 6px rgba(0, 212, 255, 0.22),
+    0 6px 15px rgba(0, 0, 0, 0.45);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  background: rgba(0, 212, 255, 0.18) !important;
+  color: #ffffff !important;
+  border-color: #39f6ff !important;
+  box-shadow:
+    inset 2px 2px 4px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 6px rgba(57, 246, 255, 0.45),
+    0 10px 20px rgba(0, 0, 0, 0.55),
+    0 0 18px rgba(0, 212, 255, 0.4) !important;
+  transform: translateY(-2px);
 }
