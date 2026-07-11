@@ -21,6 +21,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/tailwind.css" />
+  <link rel="stylesheet" href="../CSS/theme.css" />
+  <script>
+    (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);})();
+  </script>
+  <script defer src="../JavaScript/theme.js"></script>
 
   <script defer src="../JavaScript/projects.js"></script>
 
@@ -164,6 +170,10 @@
 
     
 
+    <button class="theme-toggle ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-slate-200 transition hover:border-cyan-400/40 hover:text-cyan-300" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
+      <svg class="h-5 w-5" id="themeIcon" viewBox="0 0 24 24" aria-hidden="true"></svg>
+    </button>
+
     <button class="nav-toggle" aria-label="Open menu" data-nav-toggle>
 
       <span></span><span></span><span></span>
@@ -178,7 +188,7 @@
 
     <section class="section-head reveal section-fadein">
 
-      <h2 class="h2" style="color:aliceblue;">Featured Projects</h2>
+      <h2 class="h2 bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent">Featured Projects</h2>
 
       <p class="muted"></p>
 

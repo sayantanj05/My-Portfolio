@@ -1,0 +1,176 @@
+﻿/* ============================================================
+   Theme system: dark (default neon) + light toggle
+   ============================================================ */
+
+/* ---------- Nav active underline (animated) ---------- */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  height: 2px;
+  width: 0;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #00BFFF, #39F6FF);
+  border-radius: 999px;
+  transition: width .3s ease, box-shadow .3s ease;
+  pointer-events: none;
+}
+.nav-link:hover::after { width: 55%; }
+.nav-link.active::after { width: 70%; box-shadow: 0 0 12px rgba(0,191,255,.6); }
+
+/* ---------- Theme toggle button ---------- */
+.theme-toggle { cursor: pointer; }
+.theme-toggle svg {
+  stroke: currentColor; fill: none;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ============================================================
+   LIGHT THEME  ([data-theme="light"])
+   ============================================================ */
+[data-theme="light"] body {
+  color: #0f172a;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(14,165,233,.12), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(2,132,199,.10), transparent 55%),
+    linear-gradient(180deg, #f8fafc, #eef2f7);
+}
+
+[data-theme="light"] .title,
+[data-theme="light"] .about-me-intro h3,
+[data-theme="light"] .about-content > h3,
+[data-theme="light"] .project-details-title,
+[data-theme="light"] .cert-proof-title,
+[data-theme="light"] .tech-card h3,
+[data-theme="light"] .fun-fact-card .fact-text { color: #0f172a; text-shadow: none; }
+
+[data-theme="light"] .designation,
+[data-theme="light"] .about-me-role { color: #0369a1; text-shadow: none; }
+
+[data-theme="light"] .intro,
+[data-theme="light"] .subtitle,
+[data-theme="light"] .muted,
+[data-theme="light"] .about-me-description,
+[data-theme="light"] .about-content > p,
+[data-theme="light"] .project-details-desc,
+[data-theme="light"] .cert-proof-date,
+[data-theme="light"] .contact-subheading,
+[data-theme="light"] .contact-cta-text,
+[data-theme="light"] .date-range { color: #475569; }
+
+/* Nav */
+[data-theme="light"] .nav {
+  background: rgba(255,255,255,.7);
+  border-color: rgba(2,132,199,.18);
+  color: #0f172a;
+}
+[data-theme="light"] .nav.nav--solid {
+  background: rgba(255,255,255,.85);
+  border-color: rgba(2,132,199,.30);
+}
+[data-theme="light"] .brand-glow { color: #0284c7; text-shadow: none; }
+[data-theme="light"] .nav-link { color: #334155; }
+[data-theme="light"] .nav-link:hover { color: #0f172a; background: rgba(2,132,199,.08); }
+[data-theme="light"] .nav-link.active { color: #0369a1; background: rgba(2,132,199,.10); }
+[data-theme="light"] .theme-toggle {
+  color: #0369a1; border-color: rgba(2,132,199,.3); background: rgba(255,255,255,.6);
+}
+
+/* Headings gradient -> darker cyan for contrast on light */
+[data-theme="light"] .section-heading,
+[data-theme="light"] .timeline-col h2,
+[data-theme="light"] .h2,
+[data-theme="light"] .skills-category__title,
+[data-theme="light"] .cert-dossier__title {
+  background: linear-gradient(90deg, #0369a1, #0ea5e9);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none; animation: none;
+}
+[data-theme="light"] .contact-heading {
+  background: linear-gradient(90deg, #0369a1, #0ea5e9);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards (glass surfaces) */
+[data-theme="light"] .glass-card,
+[data-theme="light"] .about-card,
+[data-theme="light"] .tech-card,
+[data-theme="light"] .fun-fact-card,
+[data-theme="light"] .career-goal-card,
+[data-theme="light"] .skill-matrix__box,
+[data-theme="light"] .skill-matrix__col,
+[data-theme="light"] .marquee-block,
+[data-theme="light"] .viz-card {
+  background: rgba(255,255,255,.72);
+  border-color: rgba(2,132,199,.18);
+  box-shadow: 0 10px 30px rgba(15,23,42,.06);
+}
+[data-theme="light"] .about-card { background: rgba(255,255,255,.85); }
+[data-theme="light"] .project-details {
+  background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(224,242,254,.5));
+  box-shadow: 0 10px 30px rgba(15,23,42,.08);
+}
+[data-theme="light"] .project-details::after { opacity: .5; }
+[data-theme="light"] .skills-column,
+[data-theme="light"] .certifications-column { background: rgba(255,255,255,.6); }
+[data-theme="light"] .cert-proof-item { background: rgba(255,255,255,.7); }
+[data-theme="light"] .info-item { background: rgba(2,132,199,.06); border-color: rgba(2,132,199,.2); }
+[data-theme="light"] .info-label { color: #0284c7; }
+[data-theme="light"] .stat { background: rgba(2,132,199,.06); border-color: rgba(2,132,199,.2); }
+[data-theme="light"] .stat-num { color: #0f172a; }
+[data-theme="light"] .stat-label { color: #475569; }
+
+/* Pills / tags */
+[data-theme="light"] .pill { color: #0f172a; border-color: rgba(2,132,199,.30); background: rgba(2,132,199,.06); }
+[data-theme="light"] .neon-tag {
+  color: #0369a1; background: rgba(255,255,255,.8);
+  border-color: rgba(2,132,199,.4); text-shadow: none;
+  box-shadow: 0 4px 14px rgba(2,132,199,.12);
+}
+[data-theme="light"] .tech-badge,
+[data-theme="light"] .skill-list li { color: #334155; border-color: rgba(2,132,199,.25); background: rgba(2,132,199,.06); }
+[data-theme="light"] .score-badge { color: #0f172a; border-color: #0284c7; background: rgba(2,132,199,.08); }
+
+/* Buttons */
+[data-theme="light"] .btn.ghost { color: #0369a1; background: rgba(2,132,199,.06); border-color: rgba(2,132,199,.3); }
+[data-theme="light"] .cta-button { color: #0284c7; border-color: #0284c7; }
+[data-theme="light"] .cta-button:hover { background: #0284c7; color: #fff; box-shadow: 0 0 15px rgba(2,132,199,.4); }
+[data-theme="light"] .btn-verify { color: #0f172a; border-color: rgba(2,132,199,.25); background: rgba(255,255,255,.6); }
+[data-theme="light"] .projects-tab { color: #334155; }
+[data-theme="light"] .projects-tab.is-active { color: #0369a1; background: rgba(2,132,199,.10); border-color: rgba(2,132,199,.4); }
+[data-theme="light"] .projects-tabs-inner { background: rgba(255,255,255,.7); border-color: rgba(2,132,199,.2); }
+
+/* Contact */
+[data-theme="light"] .contact-heading { color: #0f172a; }
+[data-theme="light"] .contact-item { color: #0f172a; }
+[data-theme="light"] .contact-item i { color: #0284c7; }
+[data-theme="light"] .social-icons a { color: #0369a1; }
+[data-theme="light"] .social-icons a:hover { color: #0284c7; }
+
+/* Floating sidebar + footer */
+[data-theme="light"] .floating-sidebar { background: rgba(255,255,255,.85); border-color: rgba(2,132,199,.3); }
+[data-theme="light"] .site-footer,
+[data-theme="light"] .foot-left { color: #334155; }
+
+[data-theme="light"] ::selection { background: rgba(2,132,199,.25); color: #0f172a; }
+
+/* ============================================================
+   Light-mode text fixes (low-contrast overrides)
+   ============================================================ */
+
+[data-theme="light"] .status-pill { color: #0f172a; }
+[data-theme="light"] .status-completed { color: #14532d; background: rgba(34,197,94,.16); }
+[data-theme="light"] .status-in-progress { color: #854d0e; background: rgba(245,179,1,.18); }
+[data-theme="light"] .status-planned { color: #334155; background: rgba(100,116,139,.16); }
+
+[data-theme="light"] .cert-category-title { color: #0f172a; }
+[data-theme="light"] .cert-category-count { color: #475569; }
+
+[data-theme="light"] .timeline-col:first-child .about-content > h3,
+[data-theme="light"] .timeline-col:nth-child(2) .about-content > h3 { color: #000; }
+
+[data-theme="light"] .goal-text { color: #0f172a; }

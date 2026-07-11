@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000M\u0000y\u0000-\u0000P\u0000o\u0000r\u0000t\u0000f\u0000o\u0000l\u0000i\u0000o\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./src/tailwind.css -o ./CSS/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/tailwind.css -o ./CSS/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayantanj05/My-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sayantanj05/My-Portfolio/issues"
+  },
+  "homepage": "https://github.com/sayantanj05/My-Portfolio#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

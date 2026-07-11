@@ -1,0 +1,18 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    @apply bg-cyan-400/30 text-white;
+  }
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+  p { @apply leading-relaxed; }
+}

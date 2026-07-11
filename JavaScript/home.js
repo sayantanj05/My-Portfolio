@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (voiceBtn) {
     const myStory =
       "Hello! I'm Sayontang Jana. " +
-      "I am a Backend Engineer and System Architect. " +
+      "I am a Backend Developer and System Designer. " +
       "Currently pursuing BCA Honours at Brainware University, " +
       "I specialize in building scalable systems using Java, Spring Boot, Database Management and DevOps. " +
       "My goal is to bridge complex technology with real-world business requirements,"+
@@ -457,7 +457,10 @@ document.addEventListener('DOMContentLoaded', () => {
       "I am also planning to built innovative projects like A AI Powered Personalized Skincare Product Recommendation System & E-Commerce Platform where I would use Computer Vision and Image Processing Technology where my system will analyze customer skin texture or issues and recommend suitable products so that customer can get the best skincare experience and buy those products, "
       "Also I planned Building an intelligent gym management system with AI-powered form correction, real-time biometric tracking, predictive health analytics, and context-aware fitness recommendations, "+
       
-      "My Ultimate Career goal is become a Backend Engineer and System Architect capable of designing scalable, reliable, and intelligent software systems that solve real-world problems.";
+      "My Ultimate Career goal is become a Backend Engineer and System Architect capable of designing scalable, reliable, and intelligent software systems that solve real-world problems."+
+      "Currently I am Skilled in Java, Spring Boot, SQL & NoSQL, DevOps, C , C++ , C#, Microservices, Php , JavaScript."+
+
+      "I expert in using  Software like Supabase, Mysql , Oracle Database , Clickhouse , ChromaDb, Postgresql";
 
     const utter = new SpeechSynthesisUtterance(myStory);
     utter.rate = 0.95;
