@@ -8,18 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // Staggered Entry Logic - Reveal items with sequential animation
-  const revealItems = $$('.reveal-item');
-  revealItems.forEach((el, index) => {
-    const delay = index * 150;
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        el.classList.add('active');
-      }, delay);
+  // Scroll-based reveals via IntersectionObserver
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        if (el.classList.contains('reveal-item')) el.classList.add('active');
+        if (el.classList.contains('fade-in-section')) el.classList.add('revealed');
+        if (el.classList.contains('section-fadein')) el.classList.add('is-visible');
+        revealObserver.unobserve(el);
+      }
     });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  $$('.reveal-item, .fade-in-section, .section-fadein').forEach((el) => {
+    revealObserver.observe(el);
   });
 
-  // Magnetic Button Interaction - Desktop only (10% follow distance)
+  // Contextual Motion - Portrait Parallax (rAF)
   $$('.btn').forEach((btn) => {
     btn.addEventListener('pointermove', (e) => {
       const rect = btn.getBoundingClientRect();
@@ -32,31 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mermaid render (if Mermaid is loaded)
-  async function renderMermaid() {
-    const mermaidEls = $$('.mermaid-bg');
-    if (!mermaidEls.length) return;
+  // Gesture-driven hover for cards (spring-like follow)
+  $$('.glass-card, .project-details, .about-card, .fun-fact-card, .tech-card').forEach((card) => {
+    card.addEventListener('pointermove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `translate(${x * 12}px, ${y * 8}px) scale(1.01)`;
+      card.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.transform = '';
+      card.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    });
+  });
 
-    if (!window.mermaid || typeof window.mermaid.initialize !== 'function') return;
-
-    try {
-      window.mermaid.initialize({
-        startOnLoad: false,
-        theme: 'dark',
-        securityLevel: 'loose'
-      });
-
-      for (const el of mermaidEls) {
-        const code = el.textContent.trim();
-        el.textContent = code;
-        await window.mermaid.run({ nodes: [el] });
-      }
-    } catch (err) {
-      console.error('Mermaid render failed:', err);
-    }
+  // Staggered children animation for hero section
+  const heroLeft = document.querySelector('.hero-left');
+  if (heroLeft) {
+    AnimationUtils.staggerChildren(heroLeft, '.reveal-item', { delay: 120, duration: 500 });
   }
-
-  renderMermaid();
 
   // Contextual Motion - Portrait Parallax (rAF)
   const portrait = $('.portrait');

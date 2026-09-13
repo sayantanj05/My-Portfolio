@@ -16,13 +16,9 @@
     (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);})();
   </script>
   <script defer src="../JavaScript/theme.js"></script>
+  <script src="../JavaScript/animations.js"></script>
   <script src="../JavaScript/home.js"></script>
   <script src="../JavaScript/About.js"></script>
-
-  <script type="module">
-    window.mermaidConfig = { startOnLoad: false };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
 </head>
 <body>
   <div class="bg" aria-hidden="true">
@@ -92,7 +88,7 @@
       <a class="nav-link" href="./Contact.html" data-link>Contact</a>
     </nav>
 
-    <button class="theme-toggle ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-slate-200 transition hover:border-cyan-400/40 hover:text-cyan-300" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
+    <button class="theme-toggle ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-stone-200 transition hover:border-amber-700/40 hover:text-amber-400" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
       <svg class="h-5 w-5" id="themeIcon" viewBox="0 0 24 24" aria-hidden="true"></svg>
     </button>
 
@@ -219,7 +215,6 @@
       </div>
     </section>
 
-
     <section id="professional-snapshot" class="page-section" aria-label="Technical Profile">
       <div class="section-container">
         <h2 class="section-heading">Domain Knowledge</h2>
@@ -239,13 +234,18 @@
             <h3>System Design</h3>
             <p>Learning to architect large-scale distributed systems with emphasis on reliability, scalability, and maintainability best practices.</p>
           </div>
-          <div class="tech-card-spacer"></div>
-          <div class="tech-card glass-card">
-            <div class="tech-card-icon"><i class="fa-solid fa-brain"></i></div>
-            <h3>AI-Powered Applications</h3>
-            <p>Exploring integration of machine learning models and AI services into backend systems to create intelligent, context-aware applications.</p>
+          <div class="tech-row-center">
+            <div class="tech-card glass-card">
+              <div class="tech-card-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Software Engineering</h3>
+              <p>Applying engineering principles to design, develop, test, and maintain reliable software systems with focus on code quality and best practices.</p>
+            </div>
+            <div class="tech-card glass-card">
+              <div class="tech-card-icon"><i class="fa-solid fa-brain"></i></div>
+              <h3>AI-Powered Applications</h3>
+              <p>Exploring integration of machine learning models and AI services into backend systems to create intelligent, context-aware applications.</p>
+            </div>
           </div>
-          <div class="tech-card-spacer"></div>
         </div>
       </div>
     </section>

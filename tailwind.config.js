@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        neon: { DEFAULT: '#00BFFF', cyan: '#39F6FF', blue: '#1b5cff' },
-        ink: { 900: '#050505', 800: '#070A12' }
+        neon: { DEFAULT: '#B87333', cyan: '#D6A15D', blue: '#B87333' },
+        ink: { 900: '#050505', 800: '#17110D' }
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'system-ui', 'sans-serif']

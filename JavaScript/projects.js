@@ -81,22 +81,17 @@
 
     const requiredStatus = tabToStatus[nextTab];
 
-    projectCards.forEach((card, index) => {
-      const cardStatus = card.getAttribute('data-project-status');
-      const matches = requiredStatus === null || cardStatus === requiredStatus;
-      
-      if (!matches && !card.hasAttribute('hidden')) {
-        card.classList.add('filtering');
-        setTimeout(() => {
+    AnimationUtils.flipAnimate(projectCards, () => {
+      projectCards.forEach((card) => {
+        const cardStatus = card.getAttribute('data-project-status');
+        const matches = requiredStatus === null || cardStatus === requiredStatus;
+        
+        if (!matches && !card.hasAttribute('hidden')) {
           card.setAttribute('hidden', '');
-          card.classList.remove('filtering');
-        }, 400);
-      } else if (matches && card.hasAttribute('hidden')) {
-        card.removeAttribute('hidden');
-        card.style.animationDelay = `${index * 50}ms`;
-        card.classList.add('filtering');
-        setTimeout(() => card.classList.remove('filtering'), 400);
-      }
+        } else if (matches && card.hasAttribute('hidden')) {
+          card.removeAttribute('hidden');
+        }
+      });
     });
   }
 

@@ -14,15 +14,8 @@
     (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);})();
   </script>
   <script defer src="../JavaScript/theme.js"></script>
+  <script src="../JavaScript/animations.js"></script>
   <script src="../JavaScript/home.js"></script>
-
-
-  <script type="module">
-
-    // Mermaid loader (global init happens in home.js)
-    window.mermaidConfig = { startOnLoad: false };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
 </head>
 <body>
   <div class="bg" aria-hidden="true">
@@ -93,7 +86,7 @@
       <a class="nav-link" href="./Contact.html" data-link>Contact</a>
     </nav>
 
-    <button class="theme-toggle ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-slate-200 transition hover:border-cyan-400/40 hover:text-cyan-300" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
+    <button class="theme-toggle ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-stone-200 transition hover:border-amber-700/40 hover:text-amber-400" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
       <svg class="h-5 w-5" id="themeIcon" viewBox="0 0 24 24" aria-hidden="true"></svg>
     </button>
 
@@ -106,7 +99,7 @@
     <section class="hero relative overflow-hidden grid-cols-1 items-center gap-10 py-10 sm:py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14" aria-labelledby="hero-title">
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(0,191,255,.12),transparent_45%),radial-gradient(circle_at_80%_60%,rgba(27,92,255,.10),transparent_45%)]"></div>
       <div class="hero-left">
-        <h1 class="title reveal-item bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent" id="hero-title">
+        <h1 class="title reveal-item" id="hero-title" style="color: #F4E9DA;">
           Hi, I'm Sayantan Jana
         </h1>
 
@@ -142,7 +135,7 @@ BCA (Hons.) student at Brainware University with a focus on Backend Developing a
         </div>
 
          <div class="hero-actions reveal-item mt-8 flex flex-wrap gap-4" aria-label="Primary actions">
-           <a class="btn primary rounded-2xl px-6 py-3 text-sm font-semibold shadow-lg shadow-cyan-500/20 transition-transform hover:-translate-y-0.5 sm:text-base" href="./Projects.html" aria-label="View projects">
+           <a class="btn primary rounded-2xl px-6 py-3 text-sm font-semibold shadow-lg shadow-amber-700/20 transition-transform hover:-translate-y-0.5 sm:text-base" href="./Projects.html" aria-label="View projects">
              <span class="btn-bg" aria-hidden="true"></span>
              View Projects
            </a>
@@ -158,7 +151,7 @@ BCA (Hons.) student at Brainware University with a focus on Backend Developing a
         </div>
 
         <div class="hero-right reveal-item">
-        <div class="portrait-card rounded-3xl shadow-2xl shadow-cyan-500/10 ring-1 ring-white/10">
+        <div class="portrait-card rounded-3xl shadow-2xl shadow-amber-700/10 ring-1 ring-white/10">
           <img class="portrait" src="../Asset/Portfile_Pic.png" alt="Profile picture" />
           <div class="scan" aria-hidden="true"></div>
           <div class="portrait-glow" aria-hidden="true"></div>

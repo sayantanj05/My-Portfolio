@@ -16,13 +16,8 @@
     (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);})();
   </script>
   <script defer src="../JavaScript/theme.js"></script>
+  <script src="../JavaScript/animations.js"></script>
   <script src="../JavaScript/home.js"></script>
-
-  <script type="module">
-    // Mermaid loader (global init happens in home.js)
-    window.mermaidConfig = { startOnLoad: false };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
 </head>
 <body>
   <div class="bg" aria-hidden="true">
@@ -92,7 +87,7 @@
       <a class="nav-link" href="./Contact.html" data-link>Contact</a>
     </nav>
 
-    <button class="theme-toggle ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-slate-200 transition hover:border-cyan-400/40 hover:text-cyan-300" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
+    <button class="theme-toggle ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-stone-200 transition hover:border-amber-700/40 hover:text-amber-400" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
       <svg class="h-5 w-5" id="themeIcon" viewBox="0 0 24 24" aria-hidden="true"></svg>
     </button>
 
@@ -107,7 +102,7 @@
 <h1 class="contact-heading gradient-shift section-fadein">Contact Me</h1>
 <p class="contact-subheading section-fadein">Feel free to reach out for collaborations or job opportunities!</p>
 
-        <div class="contact-main-wrapper section-fadein rounded-3xl border border-cyan-400/20 bg-white/5 p-6 shadow-2xl shadow-cyan-500/10 backdrop-blur-xl sm:p-8">
+        <div class="contact-main-wrapper section-fadein rounded-3xl border border-amber-700/20 bg-white/5 p-6 shadow-2xl shadow-amber-700/10 backdrop-blur-xl sm:p-8">
           <div class="contact-info">
             <div class="contact-item">
               <i class="fas fa-envelope" aria-hidden="true"></i>
@@ -135,7 +130,7 @@
           </div>
         </div>
 
-        <div class="contact-cta section-fadein rounded-3xl border border-cyan-400/20 bg-white/5 p-6 shadow-2xl shadow-cyan-500/10 backdrop-blur-xl sm:p-8">
+        <div class="contact-cta section-fadein rounded-3xl border border-amber-700/20 bg-white/5 p-6 shadow-2xl shadow-amber-700/10 backdrop-blur-xl sm:p-8">
           <div class="contact-cta-divider" aria-hidden="true"></div>
           <p class="contact-cta-text">Interested in working together? I am currently open to developer opportunities and intern roles.</p>
           <div class="cta-group">
