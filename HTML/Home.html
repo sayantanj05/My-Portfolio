@@ -11,9 +11,8 @@
   <link rel="stylesheet" href="../CSS/tailwind.css" />
   <link rel="stylesheet" href="../CSS/theme.css" />
   <script>
-    (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);})();
+    document.documentElement.setAttribute('data-theme', 'dark');
   </script>
-  <script defer src="../JavaScript/theme.js"></script>
   <script src="../JavaScript/animations.js"></script>
   <script src="../JavaScript/home.js"></script>
 </head>
@@ -85,10 +84,6 @@
        <a class="nav-link" href="./Certifications.html" data-link>Skills & Certifications</a>
       <a class="nav-link" href="./Contact.html" data-link>Contact</a>
     </nav>
-
-    <button class="theme-toggle ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-stone-200 transition hover:border-amber-700/40 hover:text-amber-400" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
-      <svg class="h-5 w-5" id="themeIcon" viewBox="0 0 24 24" aria-hidden="true"></svg>
-    </button>
 
     <button class="nav-toggle" aria-label="Open menu" data-nav-toggle>
       <span></span><span></span><span></span>

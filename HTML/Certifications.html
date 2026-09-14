@@ -13,9 +13,8 @@
   <link rel="stylesheet" href="../CSS/tailwind.css" />
   <link rel="stylesheet" href="../CSS/theme.css" />
   <script>
-    (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);})();
+    document.documentElement.setAttribute('data-theme', 'dark');
   </script>
-  <script defer src="../JavaScript/theme.js"></script>
   <script src="../JavaScript/animations.js"></script>
   <script src="../JavaScript/home.js"></script>
   <script src="../JavaScript/certifications.js"></script>
@@ -80,17 +79,13 @@
       <span class="brand-glow">MY PORTFOLIO &raquo;</span>
     </div>
 
-    <nav class="nav-links" aria-label="Primary">
+<nav class="nav-links" aria-label="Primary">
       <a class="nav-link" href="./Home.html" data-link>Home</a>
       <a class="nav-link" href="./About.html" data-link>About</a>
       <a class="nav-link" href="./Projects.html" data-link>Projects</a>
-      <a class="nav-link" href="./Certifications.html" data-link class="active">Skills &amp; Certifications</a>
+      <a class="nav-link" href="./Certifications.html" data-link class="active">Skills & Certifications</a>
       <a class="nav-link" href="./Contact.html" data-link>Contact</a>
     </nav>
-
-    <button class="theme-toggle ml-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-slate-200 transition hover:border-cyan-400/40 hover:text-cyan-300" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
-      <svg class="h-5 w-5" id="themeIcon" viewBox="0 0 24 24" aria-hidden="true"></svg>
-    </button>
 
     <button class="nav-toggle" aria-label="Open menu" data-nav-toggle>
       <span></span><span></span><span></span>
